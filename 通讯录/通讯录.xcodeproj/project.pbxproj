@@ -14,6 +14,19 @@
 		84D975EB1CB391D70058F8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D975EA1CB391D70058F8E4 /* Assets.xcassets */; };
 		84D975EE1CB391D70058F8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D975EC1CB391D70058F8E4 /* LaunchScreen.storyboard */; };
 		84D975F91CB391D80058F8E4 /* ___UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D975F81CB391D80058F8E4 /* ___UITests.swift */; };
+		84D9760D1CB3970D0058F8E4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9760C1CB3970D0058F8E4 /* MainTabBarController.swift */; };
+		84D976101CB397450058F8E4 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9760F1CB397450058F8E4 /* BaseNavigationController.swift */; };
+		84D976121CB397550058F8E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976111CB397550058F8E4 /* BaseViewController.swift */; };
+		84D976141CB3976D0058F8E4 /* BaseRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976131CB3976D0058F8E4 /* BaseRequestViewModel.swift */; };
+		84D976161CB3978E0058F8E4 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976151CB3978E0058F8E4 /* Macro.swift */; };
+		84D9761C1CB39BD70058F8E4 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9761B1CB39BD70058F8E4 /* ContactViewController.swift */; };
+		84D976221CB39C040058F8E4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976211CB39C040058F8E4 /* MessageViewController.swift */; };
+		84D976261CB3A77A0058F8E4 /* RACSignal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976231CB3A77A0058F8E4 /* RACSignal+Extensions.swift */; };
+		84D976271CB3A77A0058F8E4 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976241CB3A77A0058F8E4 /* RAC.swift */; };
+		84D976281CB3A77A0058F8E4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976251CB3A77A0058F8E4 /* RACObserve.swift */; };
+		84D9762A1CB3A8730058F8E4 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976291CB3A8730058F8E4 /* ContactViewModel.swift */; };
+		84D9762C1CB3A9010058F8E4 /* ContectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9762B1CB3A9010058F8E4 /* ContectsModel.swift */; };
+		F524CEA210B1C2E2C5AEA32D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2860A10E15AFAE9AB75732 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B2860A10E15AFAE9AB75732 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6527FEBB8DA431473E4EDF8D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		84D975DD1CB391D70058F8E4 /* 通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D975E01CB391D70058F8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D975E21CB391D70058F8E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +53,19 @@
 		84D975F41CB391D80058F8E4 /* 通讯录UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "通讯录UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D975F81CB391D80058F8E4 /* ___UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___UITests.swift"; sourceTree = "<group>"; };
 		84D975FA1CB391D80058F8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D9760C1CB3970D0058F8E4 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		84D9760F1CB397450058F8E4 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		84D976111CB397550058F8E4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		84D976131CB3976D0058F8E4 /* BaseRequestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestViewModel.swift; sourceTree = "<group>"; };
+		84D976151CB3978E0058F8E4 /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		84D9761B1CB39BD70058F8E4 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		84D976211CB39C040058F8E4 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		84D976231CB3A77A0058F8E4 /* RACSignal+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RACSignal+Extensions.swift"; sourceTree = "<group>"; };
+		84D976241CB3A77A0058F8E4 /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
+		84D976251CB3A77A0058F8E4 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
+		84D976291CB3A8730058F8E4 /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		84D9762B1CB3A9010058F8E4 /* ContectsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContectsModel.swift; sourceTree = "<group>"; };
+		9D7B9CA46DFB5E5C0DCD515F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F524CEA210B1C2E2C5AEA32D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +87,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		719C10E94462911F8E185B2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B9CA46DFB5E5C0DCD515F /* Pods.debug.xcconfig */,
+				6527FEBB8DA431473E4EDF8D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73EFE5A9E711D6C229F0321D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B2860A10E15AFAE9AB75732 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84D975D41CB391D70058F8E4 = {
 			isa = PBXGroup;
 			children = (
+				84D9760A1CB396C70058F8E4 /* OtherViewController */,
+				84D976071CB3969F0058F8E4 /* Contact */,
+				84D976081CB3969F0058F8E4 /* Message */,
+				84D976091CB3969F0058F8E4 /* Mine */,
+				84D976061CB396340058F8E4 /* Other */,
 				84D975DF1CB391D70058F8E4 /* 通讯录 */,
 				84D975F71CB391D80058F8E4 /* 通讯录UITests */,
 				84D975DE1CB391D70058F8E4 /* Products */,
+				719C10E94462911F8E185B2C /* Pods */,
+				73EFE5A9E711D6C229F0321D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +134,7 @@
 			children = (
 				84D975E01CB391D70058F8E4 /* AppDelegate.swift */,
 				84D975E21CB391D70058F8E4 /* ViewController.swift */,
+				84D976151CB3978E0058F8E4 /* Macro.swift */,
 				84D975E41CB391D70058F8E4 /* Main.storyboard */,
 				84D975EA1CB391D70058F8E4 /* Assets.xcassets */,
 				84D975EC1CB391D70058F8E4 /* LaunchScreen.storyboard */,
@@ -99,6 +153,156 @@
 			path = "通讯录UITests";
 			sourceTree = "<group>";
 		};
+		84D976031CB3961C0058F8E4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		84D976041CB3961C0058F8E4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		84D976051CB3961C0058F8E4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				84D976231CB3A77A0058F8E4 /* RACSignal+Extensions.swift */,
+				84D976241CB3A77A0058F8E4 /* RAC.swift */,
+				84D976251CB3A77A0058F8E4 /* RACObserve.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		84D976061CB396340058F8E4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				84D976031CB3961C0058F8E4 /* Category */,
+				84D976041CB3961C0058F8E4 /* Lib */,
+				84D976051CB3961C0058F8E4 /* Util */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		84D976071CB3969F0058F8E4 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				84D9761A1CB39BBB0058F8E4 /* ViewModel */,
+				84D976191CB39BB50058F8E4 /* Controller */,
+				84D976181CB39BB10058F8E4 /* View */,
+				84D976171CB39BAC0058F8E4 /* Model */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		84D976081CB3969F0058F8E4 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				84D976201CB39BEF0058F8E4 /* ViewModel */,
+				84D9761F1CB39BE70058F8E4 /* Controller */,
+				84D9761E1CB39BE30058F8E4 /* View */,
+				84D9761D1CB39BDD0058F8E4 /* Model */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		84D976091CB3969F0058F8E4 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		84D9760A1CB396C70058F8E4 /* OtherViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84D9760E1CB397120058F8E4 /* TabBarController */,
+				84D9760B1CB396D70058F8E4 /* BaseView */,
+			);
+			path = OtherViewController;
+			sourceTree = "<group>";
+		};
+		84D9760B1CB396D70058F8E4 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				84D9760F1CB397450058F8E4 /* BaseNavigationController.swift */,
+				84D976111CB397550058F8E4 /* BaseViewController.swift */,
+				84D976131CB3976D0058F8E4 /* BaseRequestViewModel.swift */,
+			);
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+		84D9760E1CB397120058F8E4 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				84D9760C1CB3970D0058F8E4 /* MainTabBarController.swift */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		84D976171CB39BAC0058F8E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84D9762B1CB3A9010058F8E4 /* ContectsModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84D976181CB39BB10058F8E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84D976191CB39BB50058F8E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84D9761B1CB39BD70058F8E4 /* ContactViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84D9761A1CB39BBB0058F8E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84D976291CB3A8730058F8E4 /* ContactViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		84D9761D1CB39BDD0058F8E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84D9761E1CB39BE30058F8E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84D9761F1CB39BE70058F8E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84D976211CB39C040058F8E4 /* MessageViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84D976201CB39BEF0058F8E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84D975FD1CB391D80058F8E4 /* Build configuration list for PBXNativeTarget "通讯录" */;
 			buildPhases = (
+				1825A8C7DAB936094FAF12C3 /* Check Pods Manifest.lock */,
 				84D975D91CB391D70058F8E4 /* Sources */,
 				84D975DA1CB391D70058F8E4 /* Frameworks */,
 				84D975DB1CB391D70058F8E4 /* Resources */,
+				0EEDD697950A8D88E949DC15 /* Embed Pods Frameworks */,
+				DC5E3B4D730DCE3421BDACD5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,14 +402,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EEDD697950A8D88E949DC15 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1825A8C7DAB936094FAF12C3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5E3B4D730DCE3421BDACD5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84D975D91CB391D70058F8E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D976261CB3A77A0058F8E4 /* RACSignal+Extensions.swift in Sources */,
+				84D976161CB3978E0058F8E4 /* Macro.swift in Sources */,
+				84D976141CB3976D0058F8E4 /* BaseRequestViewModel.swift in Sources */,
+				84D9762C1CB3A9010058F8E4 /* ContectsModel.swift in Sources */,
 				84D975E31CB391D70058F8E4 /* ViewController.swift in Sources */,
 				84D975E11CB391D70058F8E4 /* AppDelegate.swift in Sources */,
+				84D976221CB39C040058F8E4 /* MessageViewController.swift in Sources */,
+				84D976271CB3A77A0058F8E4 /* RAC.swift in Sources */,
+				84D9760D1CB3970D0058F8E4 /* MainTabBarController.swift in Sources */,
+				84D9761C1CB39BD70058F8E4 /* ContactViewController.swift in Sources */,
+				84D976101CB397450058F8E4 /* BaseNavigationController.swift in Sources */,
 				84D975E91CB391D70058F8E4 /* ___.xcdatamodeld in Sources */,
+				84D9762A1CB3A8730058F8E4 /* ContactViewModel.swift in Sources */,
+				84D976281CB3A77A0058F8E4 /* RACObserve.swift in Sources */,
+				84D976121CB397550058F8E4 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +594,7 @@
 		};
 		84D975FE1CB391D80058F8E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7B9CA46DFB5E5C0DCD515F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "通讯录/Info.plist";
@@ -338,6 +606,7 @@
 		};
 		84D975FF1CB391D80058F8E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6527FEBB8DA431473E4EDF8D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "通讯录/Info.plist";
@@ -390,6 +659,7 @@
 				84D975FF1CB391D80058F8E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D976001CB391D80058F8E4 /* Build configuration list for PBXNativeTarget "通讯录UITests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +668,7 @@
 				84D976021CB391D80058F8E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
