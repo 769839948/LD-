@@ -12,7 +12,7 @@ import MJExtension
 import Alamofire
 import ReactiveCocoa
 
-typealias successRequestClosure = (string:AnyObject) -> Void
+typealias successRequestClosure = (response:AnyObject, data:AnyObject) -> Void
 typealias errorRequestClosure = (string:AnyObject) -> Void
 typealias netErrorRequestClosure = (string:AnyObject) -> Void
 
@@ -23,35 +23,25 @@ class BaseRequestViewModel: NSObject {
     var errorClosure:errorRequestClosure!
     var netErrorClosure:netErrorRequestClosure!
     
-    func requestNet(parameter:NSDictionary, url:String, headrer:[String:String]?){
-        Alamofire.request(.GET, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.JSON, headers: headrer).responseJSON { (response) -> Void in
-//            if response.result.error == nil{
-////                self.initWithClosure
-//               self.initWithClosure(response.result.value)
-//            }else{
-////               errorRequestClosure(response.result.error)
-//            }
+    func requestNetGet(parameter:NSDictionary, url:String, headrer:[String:String]?, requestSuccess:successRequestClosure, requestError:errorRequestClosure) {
+        Alamofire.request(.GET, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.JSON, headers: nil).response { (request, response, data, error) -> Void in
+            if error != nil{
+                requestError(string: error!)
+            }else{
+                requestSuccess(response: response!, data: data!)
+            }
+            
         }
     }
     
-    func initWithClosure(closure:successRequestClosure?){
-        //将函数指针赋值给myClosure闭包，该闭包中涵盖了someFunctionThatTakesAClosure函数中的局部变量等的引用
-        successClosure = closure
-    }
-    
-    func disposable() -> RACDisposable{
-        return RACDisposable()
-    }
-    
-    func success(response:AnyObject){
-        
-    }
-    
-    func error(response:AnyObject){
-        
-    }
-    
-    func netError(response:AnyObject){
-        
+    func requestNetPost(parameter:NSDictionary, url:String, headrer:[String:String]?, requestSuccess:successRequestClosure, requestError:errorRequestClosure) {
+        Alamofire.request(.POST, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.JSON, headers: nil).response { (request, response, data, error) -> Void in
+            if error != nil{
+                requestError(string: error!)
+            }else{
+                requestSuccess(response: response!, data: data!)
+            }
+            
+        }
     }
 }

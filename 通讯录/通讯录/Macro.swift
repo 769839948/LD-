@@ -13,3 +13,7 @@ import MJRefresh
 import SDWebImage
 import SnapKit
 import Alamofire
+
+
+
+let UISCREEN_SIZE = UIScreen.mainScreen().bounds

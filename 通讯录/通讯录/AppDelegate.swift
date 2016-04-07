@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+func getAppDelegate() -> AppDelegate {
+    return UIApplication.sharedApplication().delegate as! AppDelegate
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,10 +23,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
         self.window!.rootViewController = MainTabBarController()
         self.window?.makeKeyWindow()
+        self.loadPerson()
+//        City.importDataToMoc(self.managedObjectContext)
         // Override point for customization after application launch.
         return true
     }
 
+    func loadPerson(){
+        
+    }
+    
+    func showMessage(message: String) {
+        let alertController = UIAlertController(title: "Birthdays", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let dismissAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
+        }
+        alertController.addAction(dismissAction)
+        let pushedViewControllers = (self.window?.rootViewController as! UINavigationController).viewControllers
+        let presentedViewController = pushedViewControllers[pushedViewControllers.count - 1]
+        presentedViewController.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

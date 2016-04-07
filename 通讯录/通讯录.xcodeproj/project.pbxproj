@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848468301CB6345200312545 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484682F1CB6345200312545 /* BottomView.swift */; };
+		848468381CB6631700312545 /* EdiltContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848468371CB6631700312545 /* EdiltContactViewController.swift */; };
+		84BC34E31CB4A5220021E96B /* ContectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */; };
+		84BC34EC1CB4B4FE0021E96B /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BC34EB1CB4B4FE0021E96B /* Contacts.framework */; };
+		84BC34EE1CB4B5060021E96B /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BC34ED1CB4B5060021E96B /* ContactsUI.framework */; };
+		84BC34F01CB4CDD00021E96B /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84BC34EF1CB4CDD00021E96B /* cities.plist */; };
+		84BC34FA1CB4D62F0021E96B /* SearchResultTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC34F91CB4D62F0021E96B /* SearchResultTable.swift */; };
+		84BC35001CB4EF060021E96B /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC34FF1CB4EF060021E96B /* NSString+Utils.m */; };
+		84BC35051CB4F1A40021E96B /* ContactDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC35041CB4F1A40021E96B /* ContactDataHelp.swift */; };
+		84BC350A1CB4F4F00021E96B /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 84BC35061CB4F4F00021E96B /* pinyin.c */; };
+		84BC350E1CB4F6E10021E96B /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC350D1CB4F6E10021E96B /* ChineseString.m */; };
 		84D975E11CB391D70058F8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D975E01CB391D70058F8E4 /* AppDelegate.swift */; };
 		84D975E31CB391D70058F8E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D975E21CB391D70058F8E4 /* ViewController.swift */; };
 		84D975E61CB391D70058F8E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D975E41CB391D70058F8E4 /* Main.storyboard */; };
@@ -42,6 +53,23 @@
 /* Begin PBXFileReference section */
 		5B2860A10E15AFAE9AB75732 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6527FEBB8DA431473E4EDF8D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8484682F1CB6345200312545 /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		848468371CB6631700312545 /* EdiltContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdiltContactViewController.swift; sourceTree = "<group>"; };
+		84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContectDetailViewController.swift; sourceTree = "<group>"; };
+		84BC34E41CB4AB3B0021E96B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		84BC34E61CB4AB420021E96B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		84BC34EB1CB4B4FE0021E96B /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		84BC34ED1CB4B5060021E96B /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		84BC34EF1CB4CDD00021E96B /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		84BC34F81CB4CF780021E96B /* 通讯录-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "通讯录-Bridging-Header.h"; sourceTree = "<group>"; };
+		84BC34F91CB4D62F0021E96B /* SearchResultTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTable.swift; sourceTree = "<group>"; };
+		84BC34FE1CB4EF060021E96B /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		84BC34FF1CB4EF060021E96B /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		84BC35041CB4F1A40021E96B /* ContactDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDataHelp.swift; sourceTree = "<group>"; };
+		84BC35061CB4F4F00021E96B /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		84BC35071CB4F4F00021E96B /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		84BC350C1CB4F6E10021E96B /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
+		84BC350D1CB4F6E10021E96B /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
 		84D975DD1CB391D70058F8E4 /* 通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D975E01CB391D70058F8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D975E21CB391D70058F8E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BC34EE1CB4B5060021E96B /* ContactsUI.framework in Frameworks */,
+				84BC34EC1CB4B4FE0021E96B /* Contacts.framework in Frameworks */,
 				F524CEA210B1C2E2C5AEA32D /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,9 +129,21 @@
 		73EFE5A9E711D6C229F0321D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84BC34ED1CB4B5060021E96B /* ContactsUI.framework */,
+				84BC34EB1CB4B4FE0021E96B /* Contacts.framework */,
+				84BC34E61CB4AB420021E96B /* AddressBookUI.framework */,
+				84BC34E41CB4AB3B0021E96B /* AddressBook.framework */,
 				5B2860A10E15AFAE9AB75732 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84BC34F71CB4CF420021E96B /* Btidge */ = {
+			isa = PBXGroup;
+			children = (
+				84BC34F81CB4CF780021E96B /* 通讯录-Bridging-Header.h */,
+			);
+			name = Btidge;
 			sourceTree = "<group>";
 		};
 		84D975D41CB391D70058F8E4 = {
@@ -135,6 +177,7 @@
 				84D975E01CB391D70058F8E4 /* AppDelegate.swift */,
 				84D975E21CB391D70058F8E4 /* ViewController.swift */,
 				84D976151CB3978E0058F8E4 /* Macro.swift */,
+				84BC34EF1CB4CDD00021E96B /* cities.plist */,
 				84D975E41CB391D70058F8E4 /* Main.storyboard */,
 				84D975EA1CB391D70058F8E4 /* Assets.xcassets */,
 				84D975EC1CB391D70058F8E4 /* LaunchScreen.storyboard */,
@@ -156,6 +199,8 @@
 		84D976031CB3961C0058F8E4 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				84BC34FE1CB4EF060021E96B /* NSString+Utils.h */,
+				84BC34FF1CB4EF060021E96B /* NSString+Utils.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -163,6 +208,11 @@
 		84D976041CB3961C0058F8E4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				84BC35061CB4F4F00021E96B /* pinyin.c */,
+				84BC35071CB4F4F00021E96B /* pinyin.h */,
+				84BC350C1CB4F6E10021E96B /* ChineseString.h */,
+				84BC350D1CB4F6E10021E96B /* ChineseString.m */,
+				84BC35041CB4F1A40021E96B /* ContactDataHelp.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -219,6 +269,7 @@
 		84D9760A1CB396C70058F8E4 /* OtherViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84BC34F71CB4CF420021E96B /* Btidge */,
 				84D9760E1CB397120058F8E4 /* TabBarController */,
 				84D9760B1CB396D70058F8E4 /* BaseView */,
 			);
@@ -254,6 +305,8 @@
 		84D976181CB39BB10058F8E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84BC34F91CB4D62F0021E96B /* SearchResultTable.swift */,
+				8484682F1CB6345200312545 /* BottomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -262,6 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				84D9761B1CB39BD70058F8E4 /* ContactViewController.swift */,
+				84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */,
+				848468371CB6631700312545 /* EdiltContactViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -390,6 +445,7 @@
 				84D975EE1CB391D70058F8E4 /* LaunchScreen.storyboard in Resources */,
 				84D975EB1CB391D70058F8E4 /* Assets.xcassets in Resources */,
 				84D975E61CB391D70058F8E4 /* Main.storyboard in Resources */,
+				84BC34F01CB4CDD00021E96B /* cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,21 +511,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BC350A1CB4F4F00021E96B /* pinyin.c in Sources */,
 				84D976261CB3A77A0058F8E4 /* RACSignal+Extensions.swift in Sources */,
+				84BC34FA1CB4D62F0021E96B /* SearchResultTable.swift in Sources */,
 				84D976161CB3978E0058F8E4 /* Macro.swift in Sources */,
+				848468381CB6631700312545 /* EdiltContactViewController.swift in Sources */,
 				84D976141CB3976D0058F8E4 /* BaseRequestViewModel.swift in Sources */,
 				84D9762C1CB3A9010058F8E4 /* ContectsModel.swift in Sources */,
 				84D975E31CB391D70058F8E4 /* ViewController.swift in Sources */,
 				84D975E11CB391D70058F8E4 /* AppDelegate.swift in Sources */,
 				84D976221CB39C040058F8E4 /* MessageViewController.swift in Sources */,
+				84BC35051CB4F1A40021E96B /* ContactDataHelp.swift in Sources */,
 				84D976271CB3A77A0058F8E4 /* RAC.swift in Sources */,
 				84D9760D1CB3970D0058F8E4 /* MainTabBarController.swift in Sources */,
+				84BC35001CB4EF060021E96B /* NSString+Utils.m in Sources */,
 				84D9761C1CB39BD70058F8E4 /* ContactViewController.swift in Sources */,
+				84BC34E31CB4A5220021E96B /* ContectDetailViewController.swift in Sources */,
+				848468301CB6345200312545 /* BottomView.swift in Sources */,
 				84D976101CB397450058F8E4 /* BaseNavigationController.swift in Sources */,
 				84D975E91CB391D70058F8E4 /* ___.xcdatamodeld in Sources */,
 				84D9762A1CB3A8730058F8E4 /* ContactViewModel.swift in Sources */,
 				84D976281CB3A77A0058F8E4 /* RACObserve.swift in Sources */,
 				84D976121CB397550058F8E4 /* BaseViewController.swift in Sources */,
+				84BC350E1CB4F6E10021E96B /* ChineseString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,9 +662,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "通讯录/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/Clone/LD-/通讯录/OtherViewController/通讯录-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -610,9 +676,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "通讯录/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/Clone/LD-/通讯录/OtherViewController/通讯录-Bridging-Header.h";
 			};
 			name = Release;
 		};
