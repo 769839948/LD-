@@ -19,7 +19,8 @@ PODS:
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
   - SnapKit (0.15.0)
-  - SVProgressHUD (2.0.2)
+  - SVProgressHUD (2.0.3)
+  - UMengSocial (4.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0.0)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - SDWebImage (~> 3.7)
   - SnapKit (~> 0.15.0)
   - SVProgressHUD (~> 2.0.2)
+  - UMengSocial (~> 4.3)
 
 SPEC CHECKSUMS:
   Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
-  SVProgressHUD: e4020e23badbd7cc61bc4a80d3c1da57f166a978
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  UMengSocial: aba7296602310385114d82c255539a7bef3b7ab0
 
 COCOAPODS: 0.39.0

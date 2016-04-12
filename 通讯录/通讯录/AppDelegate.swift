@@ -14,19 +14,50 @@ func getAppDelegate() -> AppDelegate {
 }
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,EMChatManagerDelegate {
 
+    var mainTabBarController:MainTabBarController!
+    var _connectionState:EMConnectionState!
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        _connectionState = EMConnectionConnected
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
-        self.window!.rootViewController = MainTabBarController()
-        self.window?.makeKeyWindow()
         self.loadPerson()
-//        City.importDataToMoc(self.managedObjectContext)
-        // Override point for customization after application launch.
+        if launchOptions == nil{
+            self.easemobApplication(application, launchOptions: ["":""], appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
+        }else{
+            self.easemobApplication(application, launchOptions: launchOptions!, appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
+        }
+        
+        self.window?.makeKeyWindow()
+
         return true
+    }
+    
+    // 将得到的deviceToken传给SDK
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+            EMClient.sharedClient().bindDeviceToken(deviceToken)
+        }
+    }
+    // 注册deviceToken失败，此处失败，与环信SDK无关，一般是您的环境配置或者证书配置有误
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("errorLoad")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        if ((mainTabBarController) != nil){
+            mainTabBarController.jumpToChatList()
+        }
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        if ((mainTabBarController) != nil){
+            mainTabBarController.didReceiveLocalNotification(notification)
+        }
     }
 
     func loadPerson(){
@@ -97,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
 
-            dict[NSUnderlyingErrorKey] = error as NSError
+            dict[NSUnderlyingErrorKey] = error as! NSError
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

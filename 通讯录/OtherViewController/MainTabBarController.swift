@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Foundation
+
+let kConversationChatter = "ConversationChatter"
 
 class MainTabBarController: UITabBarController {
 
+    var message:MessageViewController!
+    var contact:ContactViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpViewControllers()
@@ -17,12 +23,12 @@ class MainTabBarController: UITabBarController {
     }
     
     func setUpViewControllers(){
-        let contact = ContactViewController()
+        contact = ContactViewController()
         contact.tabBarItem.title = "联系人"
         contact.tabBarItem.image = UIImage(named: "Contact")
         let contactViewController = BaseNavigationController(rootViewController:contact)
         
-        let message = MessageViewController()
+        message = MessageViewController()
         message.tabBarItem.image = UIImage(named: "Message")
         message.tabBarItem.title = "消息"
         let messageViewController = BaseNavigationController(rootViewController: message)
@@ -34,16 +40,35 @@ class MainTabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func jumpToChatList(){
+        if ((self.navigationController?.topViewController?.isKindOfClass(ContactViewController.self)) != nil){
+            
+        }else{
+            self.navigationController?.popToViewController(self, animated: true);
+            self.tabBarController?.selectedIndex = 0
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    func didReceiveLocalNotification(notification: UILocalNotification){
+        let userInfo = notification.userInfo
+        if (userInfo != nil){
+            if ((self.navigationController?.topViewController?.isKindOfClass(ContactViewController.self)) != nil){
+                
+            }
+        }else{
+            let viewControllers = self.navigationController!.viewControllers as NSArray;
+            viewControllers.enumerateObjectsUsingBlock({ (obj, idx, stop) -> Void in
+                if (obj as! MainTabBarController != self){
+                    if (obj.isKindOfClass(ContactViewController.self)){
+                        self.navigationController?.popViewControllerAnimated(false);
+                    }else{
+//                        let conversationChatter = userInfo![kConversationChatter];
+//                        let chatViewController = obj as! MessageViewController;
+                    }
+                }
+            })
+        }
+    }
 
 }

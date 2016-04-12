@@ -10,5 +10,11 @@
 #define ____Bridging_Header_h
 
 #import "ChineseString.h"
+#import "EaseUI.h"
+#import "EMClient.h"
+#import "EMSDKFull.h"
+#import "EaseSDKHelper.h"
+#import "EMChatManagerDelegate.h"
+#import "YoshikoTextField.h"
 
 #endif /* ____Bridging_Header_h */

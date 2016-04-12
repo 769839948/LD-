@@ -17,3 +17,5 @@ import Alamofire
 
 
 let UISCREEN_SIZE = UIScreen.mainScreen().bounds
+
+let KNOTIFICATION_LOGINCHANGE = "LOGINSTATECHANGE"
