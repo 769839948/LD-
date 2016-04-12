@@ -187,6 +187,11 @@
                                                modelForConversation:converstion];
             }
             else{
+                
+//                EMConversation *conversation = [[EMConversation alloc] init];
+//                converstion.conversationId = @"123456";
+//                converstion
+                
                 model = [[EaseConversationModel alloc] initWithConversation:converstion];
             }
             

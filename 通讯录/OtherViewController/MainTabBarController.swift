@@ -13,7 +13,7 @@ let kConversationChatter = "ConversationChatter"
 
 class MainTabBarController: UITabBarController {
 
-    var message:MessageViewController!
+    var message:ConversationListController!
     var contact:ContactViewController!
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class MainTabBarController: UITabBarController {
         contact.tabBarItem.image = UIImage(named: "Contact")
         let contactViewController = BaseNavigationController(rootViewController:contact)
         
-        message = MessageViewController()
+        message = ConversationListController()
         message.tabBarItem.image = UIImage(named: "Message")
         message.tabBarItem.title = "消息"
         let messageViewController = BaseNavigationController(rootViewController: message)

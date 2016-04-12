@@ -19,3 +19,5 @@ import Alamofire
 let UISCREEN_SIZE = UIScreen.mainScreen().bounds
 
 let KNOTIFICATION_LOGINCHANGE = "LOGINSTATECHANGE"
+
+let THEMECOLOR = UIColor(colorLiteralRed: 0.0/255.0, green: 204.0/255.0, blue: 53.0/255.0, alpha: 1.0)

@@ -32,6 +32,7 @@ class ContactViewModel: BaseRequestViewModel {
         }
         return signal
     }
+    
     func testloadContact() -> RACSignal{
         let signal = RACSignal.createSignal { (subscriber) -> RACDisposable! in
             var contacts = [ContectsModel]()

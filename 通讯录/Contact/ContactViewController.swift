@@ -329,7 +329,7 @@ extension ContactViewController : UITableViewDataSource{
             }
             return cell!
         }else{
-//            model = contactArray[indexPath.section][indexPath.row] as! ContectsModel
+            model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! ContectsModel
             cell?.imageView?.image = UIImage(named:model.userPhoto)
             cell?.textLabel?.text = model.userName
             cell?.detailTextLabel?.text = model.userPhone
@@ -366,7 +366,7 @@ extension ContactViewController : UITableViewDataSource{
             model = searchArray[indexPath.row] as! ContectsModel
             }
         }else{
-//            model = contactArray[indexPath.section][indexPath.row] as! ContectsModel
+            model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! ContectsModel
         }
         let controller = ContectDetailViewController()
         controller.contact = model
