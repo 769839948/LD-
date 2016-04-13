@@ -56,7 +56,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"聊天";
     // Do any additional setup after loading the view.
     self.showRefreshHeader = YES;
     self.delegate = self;

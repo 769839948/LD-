@@ -91,19 +91,19 @@
             dateFormatter = [NSDateFormatter dateFormatterWithFormat:@"yyyy-MM-dd HH:mm"];
         }
     }else {
-        if (hour >= 0 && hour <= 6) {
-            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text9", @"")];
-        }else if (hour > 6 && hour <=11 ) {
-            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text10", @"")];
-        }else if (hour > 11 && hour <= 17) {
-            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text11", @"")];
-        }else if (hour > 17 && hour <= 24) {
-            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text12", @"")];
-        }else if (hour < 0 && hour >= -24){
-            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text13", @"")];
-        }else  {
+//        if (hour >= 0 && hour <= 6) {
+//            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text9", @"")];
+//        }else if (hour > 6 && hour <=11 ) {
+//            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text10", @"")];
+//        }else if (hour > 11 && hour <= 17) {
+//            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text11", @"")];
+//        }else if (hour > 17 && hour <= 24) {
+//            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text12", @"")];
+//        }else if (hour < 0 && hour >= -24){
+//            dateFormatter = [NSDateFormatter dateFormatterWithFormat:NSEaseLocalizedString(@"NSDateCategory.text13", @"")];
+//        }else  {
             dateFormatter = [NSDateFormatter dateFormatterWithFormat:@"yyyy-MM-dd HH:mm"];
-        }
+//        }
     }
     
     ret = [dateFormatter stringFromDate:self];

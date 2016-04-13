@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,EMChatManagerDelegate {
         }else{
             self.easemobApplication(application, launchOptions: launchOptions!, appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
         }
-        
+//        UINavigationBar .appearance().barTintColor = THEMECOLOR
         self.window?.makeKeyWindow()
 
         return true
