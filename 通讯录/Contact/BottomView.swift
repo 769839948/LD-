@@ -8,8 +8,11 @@
 
 import UIKit
 
+typealias senderValueClosure = (tag:NSInteger) -> Void
+
 class BottomView: UIView {
 
+    var myClosure:senderValueClosure!
     var messageBt:UIButton!
     var chatBt:UIButton!
     var email:UIButton!
@@ -19,17 +22,16 @@ class BottomView: UIView {
     }
     
     func setUpBottonView(){
-        messageBt = self.createButton("message_", tag: 1, action: "buttonPress:")
-        messageBt.backgroundColor = UIColor.grayColor()
-        messageBt.setTitle("fsfs", forState: UIControlState.Normal)
+        messageBt = self.createButton("message_", tag: 2, action: "buttonPress:")
+//        messageBt.backgroundColor = UIColor.grayColor()
         self.addSubview(messageBt)
         
-        chatBt = self.createButton("Chat", tag: 2, action: "buttonPress:")
-        chatBt.backgroundColor = UIColor.orangeColor()
+        chatBt = self.createButton("Chat", tag: 1, action: "buttonPress:")
+//        chatBt.backgroundColor = UIColor.orangeColor()
         self.addSubview(chatBt)
         
         email = self.createButton("email", tag: 3, action: "buttonPress:")
-        email.backgroundColor = UIColor.greenColor()
+//        email.backgroundColor = UIColor.greenColor()
         self.addSubview(email)
         
         self.makeConstraints()
@@ -61,14 +63,18 @@ class BottomView: UIView {
     
     func createButton(btImage:String, tag:NSInteger,action:String) -> UIButton{
         let button = UIButton(type: UIButtonType.Custom)
-        button.imageView?.image = UIImage(named: btImage)
+        button.setImage(UIImage(named: btImage), forState: UIControlState.Normal)
+        button.layer.borderColor = UIColor.lightGrayColor().CGColor
+        button.layer.borderWidth = 0.5
         button.addTarget(self, action: Selector(action), forControlEvents: UIControlEvents.TouchUpInside)
         button.tag = tag
         return button
     }
     
-    func action(sender:UIButton){
-        
+    func buttonPress(sender:UIButton){
+        if myClosure != nil{
+            myClosure(tag: sender.tag)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -18,6 +18,7 @@ class BaseNavigationController: UINavigationController {
 
     
     override func pushViewController(viewController: UIViewController, animated: Bool) {
+        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Done, target: nil, action: nil)
         if self.viewControllers.count > 0{
             viewController.hidesBottomBarWhenPushed = true
         }

@@ -24,5 +24,7 @@
 #import "EMAlertView.h"
 #import "TTGlobalUICommon.h"
 #import "ConversationListController.h"
+#import "UMsocial.h"
+#import "CoreUMeng.h"
 
 #endif /* ____Bridging_Header_h */

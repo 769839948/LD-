@@ -274,6 +274,11 @@
 		84BC35051CB4F1A40021E96B /* ContactDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC35041CB4F1A40021E96B /* ContactDataHelp.swift */; };
 		84BC350A1CB4F4F00021E96B /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 84BC35061CB4F4F00021E96B /* pinyin.c */; };
 		84BC350E1CB4F6E10021E96B /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC350D1CB4F6E10021E96B /* ChineseString.m */; };
+		84BDCFE41CBF3FDA00BE31C7 /* AppDelegate+UM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCFE31CBF3FDA00BE31C7 /* AppDelegate+UM.swift */; };
+		84BDD0331CBF697C00BE31C7 /* CoreUMeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDD02A1CBF697C00BE31C7 /* CoreUMeng.m */; };
+		84BDD0341CBF697D00BE31C7 /* CoreUMengLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDD02D1CBF697C00BE31C7 /* CoreUMengLogin.m */; };
+		84BDD0351CBF697D00BE31C7 /* CoreUmengShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDD0301CBF697C00BE31C7 /* CoreUmengShare.m */; };
+		84BDD0361CBF697D00BE31C7 /* UIViewController+Umeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BDD0321CBF697C00BE31C7 /* UIViewController+Umeng.m */; };
 		84D975E11CB391D70058F8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D975E01CB391D70058F8E4 /* AppDelegate.swift */; };
 		84D975E31CB391D70058F8E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D975E21CB391D70058F8E4 /* ViewController.swift */; };
 		84D975E61CB391D70058F8E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D975E41CB391D70058F8E4 /* Main.storyboard */; };
@@ -347,8 +352,6 @@
 		846123261CB79998008CECDD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		846123281CB799A0008CECDD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8461232A1CB799A9008CECDD /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		847B48BB1CBC844900207229 /* AppDelegate+EaseMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+EaseMob.h"; sourceTree = "<group>"; };
-		847B48BC1CBC844900207229 /* AppDelegate+EaseMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+EaseMob.m"; sourceTree = "<group>"; };
 		847B48C51CBC8AE100207229 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		847B48D01CBC97C800207229 /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
 		847B48D11CBC97C800207229 /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
@@ -750,6 +753,15 @@
 		84BC35071CB4F4F00021E96B /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 		84BC350C1CB4F6E10021E96B /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
 		84BC350D1CB4F6E10021E96B /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
+		84BDCFE31CBF3FDA00BE31C7 /* AppDelegate+UM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+UM.swift"; sourceTree = "<group>"; };
+		84BDD0291CBF697C00BE31C7 /* CoreUMeng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreUMeng.h; sourceTree = "<group>"; };
+		84BDD02A1CBF697C00BE31C7 /* CoreUMeng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreUMeng.m; sourceTree = "<group>"; };
+		84BDD02C1CBF697C00BE31C7 /* CoreUMengLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreUMengLogin.h; sourceTree = "<group>"; };
+		84BDD02D1CBF697C00BE31C7 /* CoreUMengLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreUMengLogin.m; sourceTree = "<group>"; };
+		84BDD02F1CBF697C00BE31C7 /* CoreUmengShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreUmengShare.h; sourceTree = "<group>"; };
+		84BDD0301CBF697C00BE31C7 /* CoreUmengShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreUmengShare.m; sourceTree = "<group>"; };
+		84BDD0311CBF697C00BE31C7 /* UIViewController+Umeng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Umeng.h"; sourceTree = "<group>"; };
+		84BDD0321CBF697C00BE31C7 /* UIViewController+Umeng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Umeng.m"; sourceTree = "<group>"; };
 		84D975DD1CB391D70058F8E4 /* 通讯录.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "通讯录.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D975E01CB391D70058F8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D975E21CB391D70058F8E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -1763,6 +1775,37 @@
 			name = Bridging;
 			sourceTree = "<group>";
 		};
+		84BDD0281CBF697C00BE31C7 /* CoreUMeng */ = {
+			isa = PBXGroup;
+			children = (
+				84BDD0291CBF697C00BE31C7 /* CoreUMeng.h */,
+				84BDD02A1CBF697C00BE31C7 /* CoreUMeng.m */,
+				84BDD02B1CBF697C00BE31C7 /* Login */,
+				84BDD02E1CBF697C00BE31C7 /* Share */,
+			);
+			path = CoreUMeng;
+			sourceTree = "<group>";
+		};
+		84BDD02B1CBF697C00BE31C7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84BDD02C1CBF697C00BE31C7 /* CoreUMengLogin.h */,
+				84BDD02D1CBF697C00BE31C7 /* CoreUMengLogin.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84BDD02E1CBF697C00BE31C7 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				84BDD02F1CBF697C00BE31C7 /* CoreUmengShare.h */,
+				84BDD0301CBF697C00BE31C7 /* CoreUmengShare.m */,
+				84BDD0311CBF697C00BE31C7 /* UIViewController+Umeng.h */,
+				84BDD0321CBF697C00BE31C7 /* UIViewController+Umeng.m */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		84D975D41CB391D70058F8E4 = {
 			isa = PBXGroup;
 			children = (
@@ -1792,9 +1835,8 @@
 			isa = PBXGroup;
 			children = (
 				84D975E01CB391D70058F8E4 /* AppDelegate.swift */,
+				84BDCFE31CBF3FDA00BE31C7 /* AppDelegate+UM.swift */,
 				847B4A641CBC9DD100207229 /* AppDelegate+EaseMob.swift */,
-				847B48BB1CBC844900207229 /* AppDelegate+EaseMob.h */,
-				847B48BC1CBC844900207229 /* AppDelegate+EaseMob.m */,
 				84D975E21CB391D70058F8E4 /* ViewController.swift */,
 				84D976151CB3978E0058F8E4 /* Macro.swift */,
 				84BC34EF1CB4CDD00021E96B /* cities.plist */,
@@ -1836,6 +1878,7 @@
 		84D976041CB3961C0058F8E4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				84BDD0281CBF697C00BE31C7 /* CoreUMeng */,
 				847F88601CBE086D0008D8B5 /* Resources */,
 				847B4A611CBC994600207229 /* EaseUI.h */,
 				847B4A621CBC994600207229 /* EaseUI.m */,
@@ -2247,7 +2290,9 @@
 				847B4AE31CBCF28600207229 /* SRSlimeView.m in Sources */,
 				847B4A5F1CBC97C900207229 /* EaseRecordView.m in Sources */,
 				847B4A0E1CBC97C900207229 /* MWGridCell.m in Sources */,
+				84BDD0361CBF697D00BE31C7 /* UIViewController+Umeng.m in Sources */,
 				847B48C61CBC8AE100207229 /* LoginViewController.swift in Sources */,
+				84BDCFE41CBF3FDA00BE31C7 /* AppDelegate+UM.swift in Sources */,
 				84BC350A1CB4F4F00021E96B /* pinyin.c in Sources */,
 				847B4A2C1CBC97C900207229 /* PSTCollectionViewItemKey.m in Sources */,
 				847B4A471CBC97C900207229 /* EaseMessageViewController.m in Sources */,
@@ -2260,6 +2305,7 @@
 				847B49F51CBC97C800207229 /* EMVoiceConverter.mm in Sources */,
 				847B4A2D1CBC97C900207229 /* PSTCollectionViewLayout.m in Sources */,
 				847B4A571CBC97C900207229 /* EaseBubbleView.m in Sources */,
+				84BDD0331CBF697C00BE31C7 /* CoreUMeng.m in Sources */,
 				847B4A451CBC97C900207229 /* EaseConversationListViewController.m in Sources */,
 				847B4A231CBC97C900207229 /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				847B4A3A1CBC97C900207229 /* NSString+Valid.m in Sources */,
@@ -2293,6 +2339,7 @@
 				847B4A1F1CBC97C900207229 /* UIButton+EMWebCache.m in Sources */,
 				847B49EE1CBC97C800207229 /* EMCDDeviceManager+Media.m in Sources */,
 				847B4A351CBC97C900207229 /* EaseConversationModel.m in Sources */,
+				84BDD0351CBF697D00BE31C7 /* CoreUmengShare.m in Sources */,
 				84D976161CB3978E0058F8E4 /* Macro.swift in Sources */,
 				847B4A9F1CBCEAB900207229 /* EMSearchBar.m in Sources */,
 				847B4A9E1CBCEAB900207229 /* BaseTableViewCell.m in Sources */,
@@ -2385,6 +2432,7 @@
 				847B4A5C1CBC97C900207229 /* EaseFaceView.m in Sources */,
 				847B4A3F1CBC97C900207229 /* EaseMessageReadManager.m in Sources */,
 				847B4A511CBC97C900207229 /* EaseBubbleView+Gif.m in Sources */,
+				84BDD0341CBF697D00BE31C7 /* CoreUMengLogin.m in Sources */,
 				84BC350E1CB4F6E10021E96B /* ChineseString.m in Sources */,
 				847B4A1D1CBC97C900207229 /* MKAnnotationView+EMWebCache.m in Sources */,
 			);

@@ -32,6 +32,10 @@ class ContectDetailViewController: UIViewController {
     
     func setUpBottomView(){
         bottomView = BottomView()
+        bottomView.myClosure = { (tag) -> Void in
+            print(tag)
+            self.pushViewController(tag)
+        }
         self.view.addSubview(bottomView)
         
         self.makeConstraints()
@@ -54,6 +58,8 @@ class ContectDetailViewController: UIViewController {
         }
     }
     
+    
+    
     func setUpNavigationItem()
     {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItemStyle.Done, target: self, action: Selector("editButtonPress:"))
@@ -64,6 +70,20 @@ class ContectDetailViewController: UIViewController {
     
     func editButtonPress(sender:UIBarButtonItem){
         
+    }
+    
+    
+    func pushViewController(tag:NSInteger){
+        if tag == 1{
+           let conversation = EMClient.sharedClient().chatManager.getConversation(contact.userName, type: EMConversationTypeChat, createIfNotExist: true) as EMConversation
+            let chatControler = ChatViewController(conversationChatter: conversation.conversationId, conversationType: conversation.type)
+            chatControler.title = conversation.conversationId;
+            self.navigationController?.pushViewController(chatControler, animated: true)
+        }else if(tag == 2){
+            
+        }else{
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -107,7 +127,7 @@ extension ContectDetailViewController : UITableViewDataSource{
         }else if indexPath.row == 2{
             cell?.textLabel?.text = contact.userEmail
         }else{
-            cell?.textLabel?.text = "部门:" + contact.userEmail
+            cell?.textLabel?.text = "部门:" + contact.userGroup
         }
         return cell!
     }
