@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '430171131C22F0D1B0E9A301'
+               BlueprintIdentifier = '314ECC1B2121F058FF8891A1'
                BlueprintName = 'MJExtension'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'MJExtension.framework'>
