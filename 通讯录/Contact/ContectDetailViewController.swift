@@ -16,6 +16,7 @@ class ContectDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "详细信息";
         self.view.backgroundColor = UIColor.whiteColor()
         self.setUpTableView()
         self.setUpBottomView()
@@ -63,13 +64,13 @@ class ContectDetailViewController: UIViewController {
     func setUpNavigationItem()
     {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItemStyle.Done, target: self, action: Selector("editButtonPress:"))
-        let controller = EdiltContactViewController()
-        controller.contact = contact
-        self.navigationController?.pushViewController(controller, animated: true)
+        
     }
     
     func editButtonPress(sender:UIBarButtonItem){
-        
+        let controller = EdiltContactViewController()
+        controller.contact = contact
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     
@@ -99,7 +100,7 @@ extension ContectDetailViewController : UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
 }
 
@@ -126,9 +127,18 @@ extension ContectDetailViewController : UITableViewDataSource{
             cell?.textLabel?.text = contact.userPhone
         }else if indexPath.row == 2{
             cell?.textLabel?.text = contact.userEmail
-        }else{
+        }else if indexPath.row == 3{
             cell?.textLabel?.text = "部门:" + contact.userGroup
+        }else{
+            cell?.textLabel?.text = "分享"
         }
         return cell!
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 4 {
+            CoreUmengShare.show(self, text: "友盟分享", image: nil)
+        }
+    }
 }
+

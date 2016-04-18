@@ -26,5 +26,6 @@
 #import "ConversationListController.h"
 #import "UMsocial.h"
 #import "CoreUMeng.h"
+#import "CoreUmengShare.h"
 
 #endif /* ____Bridging_Header_h */

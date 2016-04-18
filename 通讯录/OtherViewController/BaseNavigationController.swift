@@ -21,8 +21,10 @@ class BaseNavigationController: UINavigationController {
         viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Done, target: nil, action: nil)
         if self.viewControllers.count > 0{
             viewController.hidesBottomBarWhenPushed = true
+//            super.pushViewController(viewController, animated: animated)
         }
-        super.pushViewController(viewController, animated: animated)
+        super.pushViewController(viewController, animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {

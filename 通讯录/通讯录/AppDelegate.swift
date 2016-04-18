@@ -25,13 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,EMChatManagerDelegate {
         
         _connectionState = EMConnectionConnected
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
-        self.loadPerson()
-        if launchOptions == nil{
-            self.easemobApplication(application, launchOptions: ["":""], appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
-        }else{
-            self.easemobApplication(application, launchOptions: launchOptions!, appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
-        }
+//        self.loadPerson()
+//        if launchOptions == nil{
+//            self.easemobApplication(application, launchOptions: ["":""], appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
+//        }else{
+//            self.easemobApplication(application, launchOptions: launchOptions!, appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
+//        }
 //        UINavigationBar .appearance().barTintColor = THEMECOLOR
+        let mainViewController = MainTabBarController()
+        self.window!.rootViewController = mainViewController
         self.window?.makeKeyWindow()
 
         return true

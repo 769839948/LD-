@@ -35,8 +35,11 @@ extension AppDelegate{
 //        UINavigationController *navigationController = nil;
         if (loginSuccess) {//登陆成功加载主窗口控制器
             //加载申请通知的数据
-            let mainViewController = MainTabBarController();
-            self.window!.rootViewController = mainViewController;
+            let loginController = LoginViewController();
+            let navigationController = UINavigationController(rootViewController:loginController);
+            self.window!.rootViewController = navigationController;
+//            let mainViewController = MainTabBarController();
+//            self.window!.rootViewController = mainViewController;
         }else{//登陆失败加载登陆页面控制器
 //            self.mainController = nil;
 //            [ChatDemoHelper shareHelper].mainVC = nil;

@@ -361,16 +361,20 @@ extension ContactViewController : UITableViewDataSource{
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var model = ContectsModel()
-        if contactSearch.active{
-            if self.searchArray.count > 0{
-            model = searchArray[indexPath.row] as! ContectsModel
-            }
-        }else{
+//        if contactSearch.active{
+//            if self.searchArray.count > 0{
+//            model = searchArray[indexPath.row] as! ContectsModel
+//            }
+//            let controller = ContectDetailViewController()
+//            controller.contact = model
+//            self.navigationController?.pushViewController(controller, animated: true)
+//        }else{
             model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! ContectsModel
-        }
-        let controller = ContectDetailViewController()
-        controller.contact = model
-        self.navigationController?.pushViewController(controller, animated: true)
+            let controller = ContectDetailViewController()
+            controller.contact = model
+            self.navigationController?.pushViewController(controller, animated: true)
+//        }
+        
     }
 }
 

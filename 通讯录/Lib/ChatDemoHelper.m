@@ -11,7 +11,7 @@
  */
 
 #import "ChatDemoHelper.h"
-
+#import "通讯录-Swift.h"
 
 #import "TTGlobalUICommon.h"
 
@@ -25,9 +25,11 @@
 
 @interface ChatDemoHelper()<EMCallManagerDelegate>
 {
+    MainTabBarController *mainVC;
     NSTimer *_callTimer;
 }
 
+//@property (nonatomic, ) MainTabBarController *mainVC;
 
 @end
 
@@ -203,7 +205,7 @@ static ChatDemoHelper *helper = nil;
 
 - (void)didReceiveCmdMessages:(NSArray *)aCmdMessages
 {
-//    if (self.mainVC) {
+//    if () {
 //        [_mainVC showHint:NSLocalizedString(@"receiveCmd", @"receive cmd message")];
 //    }
 }
@@ -215,20 +217,20 @@ static ChatDemoHelper *helper = nil;
         BOOL needShowNotification = (message.chatType != EMChatTypeChat) ? [self _needShowNotification:message.conversationId] : YES;
         if (needShowNotification) {
 #if !TARGET_IPHONE_SIMULATOR
-            UIApplicationState state = [[UIApplication sharedApplication] applicationState];
-            switch (state) {
-                case UIApplicationStateActive:
-                    [self.mainVC playSoundAndVibration];
-                    break;
-                case UIApplicationStateInactive:
-                    [self.mainVC playSoundAndVibration];
-                    break;
-                case UIApplicationStateBackground:
-                    [self.mainVC showNotificationWithMessage:message];
-                    break;
-                default:
-                    break;
-            }
+//            UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+//            switch (state) {
+//                case UIApplicationStateActive:
+//                    [mainVC playSoundAndVibration];
+//                    break;
+//                case UIApplicationStateInactive:
+//                    [self.mainVC playSoundAndVibration];
+//                    break;
+//                case UIApplicationStateBackground:
+//                    [self.mainVC showNotificationWithMessage:message];
+//                    break;
+//                default:
+//                    break;
+//            }
 #endif
         }
         
