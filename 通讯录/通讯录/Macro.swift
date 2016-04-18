@@ -14,7 +14,9 @@ import SDWebImage
 import SnapKit
 import Alamofire
 
-
+let BaseUrl = "http://localhost:8080/Contact/"
+let GetCompanyUser = "getCompanyUserAction"
+let GetCompanyGroup = "getCompanyGroup"
 
 let UISCREEN_SIZE = UIScreen.mainScreen().bounds
 

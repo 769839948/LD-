@@ -10,7 +10,7 @@ import UIKit
 
 class EdiltContactViewController: UIViewController {
 
-    var contact:ContectsModel!
+    var contact:Contacts!
     var tableView:UITableView!
     
     override func viewDidLoad() {

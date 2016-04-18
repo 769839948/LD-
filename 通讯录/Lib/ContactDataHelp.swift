@@ -11,18 +11,18 @@ import Contacts
 
 class ContactDataHelp: NSObject {
 
-    func tableViewSectionArray(contact:[ContectsModel]) -> NSMutableArray{
+    func tableViewSectionArray(contact:[Contacts]) -> NSMutableArray{
 //        gicenName;
         let names = NSMutableArray()
         for index in contact{
-            names.addObject(index.userName)
+            names.addObject(index.username)
         }
         
         return ChineseString.IndexArray(names as [AnyObject])
     
     }
     
-    func tableViewLetterSortArray(contact:[ContectsModel]) -> NSMutableArray{
+    func tableViewLetterSortArray(contact:[Contacts]) -> NSMutableArray{
         //        gicenName;
 //        let names = NSMutableArray()
 //        for index in contact{

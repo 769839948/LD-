@@ -12,7 +12,7 @@ class ContectDetailViewController: UIViewController {
 
     var tableView:UITableView!
     var bottomView:BottomView!
-    var contact: ContectsModel!
+    var contact: Contacts!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +76,7 @@ class ContectDetailViewController: UIViewController {
     
     func pushViewController(tag:NSInteger){
         if tag == 1{
-           let conversation = EMClient.sharedClient().chatManager.getConversation(contact.userName, type: EMConversationTypeChat, createIfNotExist: true) as EMConversation
+           let conversation = EMClient.sharedClient().chatManager.getConversation(contact.username, type: EMConversationTypeChat, createIfNotExist: true) as EMConversation
             let chatControler = ChatViewController(conversationChatter: conversation.conversationId, conversationType: conversation.type)
             chatControler.title = conversation.conversationId;
             self.navigationController?.pushViewController(chatControler, animated: true)
@@ -122,13 +122,13 @@ extension ContectDetailViewController : UITableViewDataSource{
         }
         if indexPath.row == 0 {
             cell?.imageView?.image = UIImage(named: "user")
-            cell?.textLabel?.text = contact.userName
+            cell?.textLabel?.text = contact.username
         }else if indexPath.row == 1{
-            cell?.textLabel?.text = contact.userPhone
+            cell?.textLabel?.text = contact.phone
         }else if indexPath.row == 2{
-            cell?.textLabel?.text = contact.userEmail
+            cell?.textLabel?.text = contact.email
         }else if indexPath.row == 3{
-            cell?.textLabel?.text = "部门:" + contact.userGroup
+            cell?.textLabel?.text = "部门:" + contact.department
         }else{
             cell?.textLabel?.text = "分享"
         }

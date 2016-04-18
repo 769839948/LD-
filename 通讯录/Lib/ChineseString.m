@@ -44,8 +44,8 @@
     NSMutableArray *array = [stringArr mutableCopy];
     NSMutableArray *nameArray = [NSMutableArray array];
     for (int i = 0; i < array.count; i++ ){
-        ContectsModel *contact = (ContectsModel *)array[i];
-        [nameArray addObject:[NSString stringWithFormat:@"%@",contact.userName]];
+        Contacts *contact = (Contacts *)array[i];
+        [nameArray addObject:[NSString stringWithFormat:@"%@",contact.username]];
     }
     NSMutableArray *tempArray = [self ReturnSortChineseArrar:nameArray];
     NSMutableArray *LetterResult = [NSMutableArray array];
@@ -62,8 +62,8 @@
             if(![tempString isEqualToString:pinyin] )
             {
                 for (int i = 0; i < array.count; i++ ){
-                    ContectsModel *contact = (ContectsModel *)array[i];
-                    if ([[NSString stringWithFormat:@"%@",contact.userName] isEqualToString:string]) {
+                    Contacts *contact = (Contacts *)array[i];
+                    if ([[NSString stringWithFormat:@"%@",contact.username] isEqualToString:string]) {
                         item = [NSMutableArray array];
                         [item  addObject:contact];
                         [LetterResult addObject:item];
@@ -79,8 +79,8 @@
             }else//相同
             {
                 for (int i = 0; i < array.count; i++ ){
-                    ContectsModel *contact = (ContectsModel *)array[i];
-                    if ([[NSString stringWithFormat:@"%@",contact.userName] isEqualToString:string]) {
+                    Contacts *contact = (Contacts *)array[i];
+                    if ([[NSString stringWithFormat:@"%@",contact.username] isEqualToString:string]) {
                         [item  addObject:contact];
                         break;
                     }

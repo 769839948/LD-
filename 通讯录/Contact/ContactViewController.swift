@@ -15,7 +15,7 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
 
     var contactStore = CNContactStore()
     var myContacts = [CNContact]()
-    var Contacts = [ContectsModel]()
+    var contacts = [Contacts]()
     
     var contactSearch:UISearchController!
 
@@ -30,28 +30,20 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     
     var viewModel:ContactViewModel!
     var tableView:UITableView!
-    
+    var groupView:ContactGroupViewController!
     var searchString = [String]()
     var adHeaders:[String] = []
-////    ["A", "B", "C", "D", "E", "F", "G",
-//        "H", "I", "J", "K", "L", "M", "N",
-//        "O", "P", "Q", "R", "S", "T",
-//        "U", "V", "W", "X", "Y", "Z"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        self.setUpContact()
-        self.setUpSearchBar()
         self.setUpNavigationItem()
+        self.setUpOnetableView()
+    }
+    
+    func setUpOnetableView(){
+        self.setUpSearchBar()
         self.setUpTableView()
         self.initSectionIndexAreaColors()
-        
-//        let data = ContactDataHelp()
-//        adHeaders = data.tableViewSectionArray(self.Contacts).copy() as! [String]
-//        contactArray = data.tableViewLetterSortArray(self.Contacts)
-        // Do any additional setup after loading the view.
     }
     
     func setUpSearchBar(){
@@ -67,8 +59,6 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
             controller.searchBar.sizeToFit()
             return controller
         })()
-        
-//        self.view.addSubview(searcher.searchBar)
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -84,8 +74,6 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         //2.3将状态栏变为白色
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default;
-//        searchBar.backgroundColor = UIColor.redColor()
-//        searchBar.frame = CGRectMake(0, 64, 500, 500)
     }
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         //2.3将状态栏变为白色
@@ -135,6 +123,35 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     func setUpNavigationItem(){
         segmentController = UISegmentedControl(items: ["通讯录","群组"])
         segmentController.selectedSegmentIndex = 0
+        segmentController.rac_signalForControlEvents(UIControlEvents.ValueChanged).subscribeNext { (segmentIndex) -> Void in
+            if segmentIndex.selectedSegmentIndex == 0{
+                if self.tableView != nil{
+                    self.tableView.hidden = false
+                }
+                if self.groupView.view != nil{
+                    self.groupView.view.hidden = true
+                }
+            }else{
+                if self.groupView != nil{
+                    self.groupView.view.hidden = false
+                }else{
+                    self.groupView = ContactGroupViewController()
+                    self.view.addSubview(self.groupView.view)
+                    self.groupView.view.snp_makeConstraints(closure: { (make) -> Void in
+                        make.top.equalTo(self.view.snp_top).offset(64)
+                        make.left.equalTo(self.view.snp_left).offset(0)
+                        make.right.equalTo(self.view.snp_right).offset(0)
+                        make.bottom.equalTo(self.view.snp_bottom).offset(0)
+                    })
+                }
+                if self.tableView != nil {
+                    self.tableView.hidden = true
+                }
+                self.groupView.myClosure = {(model) -> Void in
+                    self.pushViewController(model)
+                }
+            }
+        }
         self.navigationItem.titleView = segmentController;
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("addContact"))
@@ -142,7 +159,7 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     
     func addContact(){
         let controller = EdiltContactViewController()
-        controller.contact = ContectsModel()
+        controller.contact = Contacts()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -155,7 +172,6 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
         
         tableView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(self.view.snp_top).offset(0)
-//            make.top.equalTo(self.searcher.searchBar.snp_bottom).offset(0)
             make.left.equalTo(self.view.snp_left).offset(0)
             make.right.equalTo(self.view.snp_right).offset(0)
             make.bottom.equalTo(self.view.snp_bottom).offset(0)
@@ -167,14 +183,18 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
     
     func bindeViewModel(){
         viewModel = ContactViewModel()
-        viewModel.testloadContact().subscribeNext { (array) -> Void in
-            self.Contacts = array as! [ContectsModel]
+        viewModel.loadContact().subscribeNext { (model) -> Void in
+            let contactModel = model as! ContactModel
+            for contact in contactModel.contacts{
+//                let cmodel = Contacts.mj_objectWithKeyValues(contact)
+                self.contacts.append(contact as! Contacts)
+            }
             self.orginArray = NSMutableArray()
             self.searchArray = NSMutableArray()
-            self.orginArray.addObjectsFromArray(self.Contacts)
+            self.orginArray.addObjectsFromArray(self.contacts)
             let data = ContactDataHelp()
-            self.adHeaders = data.tableViewSectionArray(self.Contacts).copy() as! [String]
-            self.contactArray = data.tableViewLetterSortArray(self.Contacts)
+            self.adHeaders = data.tableViewSectionArray(self.contacts).copy() as! [String]
+            self.contactArray = data.tableViewLetterSortArray(self.contacts)
             self.tableView.reloadData()
         }
     }
@@ -189,7 +209,6 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
         searchArray.removeAllObjects()
         let range = searchController.searchBar.text!.characters.startIndex ..< searchController.searchBar.text!.characters.endIndex
         var searchString = String()
-        
         searchController.searchBar.text?.enumerateSubstringsInRange(range, options: .ByComposedCharacterSequences, { (substring, substringRange, enclosingRange, success) in
             searchString.appendContentsOf(substring!)
             searchString.appendContentsOf("*")
@@ -201,10 +220,6 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
             searchArray.addObject(model)
         }
         self.tableView.reloadData()
-//        print(array)
-//        searchArray.addObjectsFromArray(array)
-//        countryTable.reloadData()
-        
     }
     
     // MARK: CNContactStore Authorization Methods
@@ -241,6 +256,12 @@ class ContactViewController: UIViewController,UISearchResultsUpdating,UISearchBa
 //        alert.addAction(okAction)
 //        presentViewController(alert, animated: true, completion: nil)
 //    }
+    
+    func pushViewController(model:Contacts) {
+        let controller = ContectDetailViewController()
+        controller.contact = model
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 
 }
 
@@ -319,61 +340,36 @@ extension ContactViewController : UITableViewDataSource{
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: identifier)
         }
-        var model:ContectsModel!
+        var model:Contacts!
         if contactSearch.active{
             if self.searchArray.count > 0{
-                model = self.searchArray[indexPath.row] as! ContectsModel
-                cell?.imageView?.image = UIImage(named:model.userPhoto)
-                cell?.textLabel?.text = model.userName
-                cell?.detailTextLabel?.text = model.userPhone
+                model = self.searchArray[indexPath.row] as! Contacts
+                cell?.imageView?.image = UIImage(named:model.phone)
+                cell?.textLabel?.text = model.username
+                cell?.detailTextLabel?.text = model.phone
             }
             return cell!
         }else{
-            model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! ContectsModel
-            cell?.imageView?.image = UIImage(named:model.userPhoto)
-            cell?.textLabel?.text = model.userName
-            cell?.detailTextLabel?.text = model.userPhone
+            model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! Contacts
+            cell?.imageView?.image = UIImage(named:model.phone)
+            cell?.textLabel?.text = model.username
+            cell?.detailTextLabel?.text = model.phone
             return cell!
         }
         
-//        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        
-//        let contact = contactArray[indexPath.section][indexPath.row] as! ContectsModel
-//        cell!.imageView?.image = UIImage(named: contact.userPhoto)
-//        cell!.textLabel!.text = contact.contact.familyName + " " + contact.contact.givenName
-//        
-//        var emailString = ""
-//        for emailAddress in contact.contact.emailAddresses {
-//            emailString = emailString + (emailAddress.value as! String) + ", "
-//        }
-//        
-//        // Remove the final ", " from the concatenated string
-//        if emailString != "" {
-//            let myRange = Range<String.Index>(start: emailString.endIndex.predecessor().predecessor(), end: emailString.endIndex.predecessor())
-//            emailString.removeRange(myRange)
-//        }
-//        if let phoneNumber =  contact.contact.phoneNumbers.first?.value as? CNPhoneNumber{
-//            cell!.detailTextLabel?.text = phoneNumber.stringValue
-//        }
-//        cell!.detailTextLabel?.text = emailString
-//        cell!.detailTextLabel?.text = numberArray[0];
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var model = ContectsModel()
-//        if contactSearch.active{
-//            if self.searchArray.count > 0{
-//            model = searchArray[indexPath.row] as! ContectsModel
-//            }
-//            let controller = ContectDetailViewController()
-//            controller.contact = model
-//            self.navigationController?.pushViewController(controller, animated: true)
-//        }else{
-            model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! ContectsModel
-            let controller = ContectDetailViewController()
-            controller.contact = model
-            self.navigationController?.pushViewController(controller, animated: true)
-//        }
+        var model = Contacts()
+        if contactSearch.active{
+            if self.searchArray.count > 0{
+            model = searchArray[indexPath.row] as! Contacts
+            }
+            self.pushViewController(model)
+        }else{
+            model = contactArray.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row) as! Contacts
+            self.pushViewController(model)
+        }
         
     }
 }

@@ -27,5 +27,7 @@
 #import "UMsocial.h"
 #import "CoreUMeng.h"
 #import "CoreUmengShare.h"
+#import "GroupModel.h"
+
 
 #endif /* ____Bridging_Header_h */

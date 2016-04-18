@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8452CA141CC4A0850049C2F2 /* ContactGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452CA131CC4A0850049C2F2 /* ContactGroupViewController.swift */; };
+		8452CA171CC4BA0B0049C2F2 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452CA161CC4BA0B0049C2F2 /* GroupModel.m */; };
+		8452CA1C1CC4DE570049C2F2 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452CA1B1CC4DE570049C2F2 /* ContactModel.swift */; };
 		846123171CB79947008CECDD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846123161CB79947008CECDD /* CoreMedia.framework */; };
 		846123191CB79950008CECDD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846123181CB79950008CECDD /* AudioToolbox.framework */; };
 		8461231B1CB7995A008CECDD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8461231A1CB7995A008CECDD /* AVFoundation.framework */; };
@@ -296,13 +299,16 @@
 		84D976271CB3A77A0058F8E4 /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976241CB3A77A0058F8E4 /* RAC.swift */; };
 		84D976281CB3A77A0058F8E4 /* RACObserve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976251CB3A77A0058F8E4 /* RACObserve.swift */; };
 		84D9762A1CB3A8730058F8E4 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976291CB3A8730058F8E4 /* ContactViewModel.swift */; };
-		84D9762C1CB3A9010058F8E4 /* ContectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9762B1CB3A9010058F8E4 /* ContectsModel.swift */; };
 		F524CEA210B1C2E2C5AEA32D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2860A10E15AFAE9AB75732 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B2860A10E15AFAE9AB75732 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6527FEBB8DA431473E4EDF8D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8452CA131CC4A0850049C2F2 /* ContactGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactGroupViewController.swift; sourceTree = "<group>"; };
+		8452CA151CC4BA0B0049C2F2 /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
+		8452CA161CC4BA0B0049C2F2 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
+		8452CA1B1CC4DE570049C2F2 /* ContactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		846122EC1CB79923008CECDD /* EMCallLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallLocalView.h; sourceTree = "<group>"; };
 		846122ED1CB79923008CECDD /* EMCallManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallManagerDelegate.h; sourceTree = "<group>"; };
 		846122EE1CB79923008CECDD /* EMCallRemoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCallRemoteView.h; sourceTree = "<group>"; };
@@ -783,7 +789,6 @@
 		84D976241CB3A77A0058F8E4 /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
 		84D976251CB3A77A0058F8E4 /* RACObserve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACObserve.swift; sourceTree = "<group>"; };
 		84D976291CB3A8730058F8E4 /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
-		84D9762B1CB3A9010058F8E4 /* ContectsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContectsModel.swift; sourceTree = "<group>"; };
 		9D7B9CA46DFB5E5C0DCD515F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1976,7 +1981,9 @@
 		84D976171CB39BAC0058F8E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84D9762B1CB3A9010058F8E4 /* ContectsModel.swift */,
+				8452CA1B1CC4DE570049C2F2 /* ContactModel.swift */,
+				8452CA151CC4BA0B0049C2F2 /* GroupModel.h */,
+				8452CA161CC4BA0B0049C2F2 /* GroupModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1996,6 +2003,7 @@
 				84D9761B1CB39BD70058F8E4 /* ContactViewController.swift */,
 				84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */,
 				848468371CB6631700312545 /* EdiltContactViewController.swift */,
+				8452CA131CC4A0850049C2F2 /* ContactGroupViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -2298,6 +2306,7 @@
 				847B4A471CBC97C900207229 /* EaseMessageViewController.m in Sources */,
 				84D976261CB3A77A0058F8E4 /* RACSignal+Extensions.swift in Sources */,
 				847B4A0F1CBC97C900207229 /* MWGridViewController.m in Sources */,
+				8452CA171CC4BA0B0049C2F2 /* GroupModel.m in Sources */,
 				847B49EF1CBC97C800207229 /* EMCDDeviceManager+Microphone.m in Sources */,
 				847B4ACE1CBCF27000207229 /* EMAlertView.m in Sources */,
 				847B4A141CBC97C900207229 /* MWZoomingScrollView.m in Sources */,
@@ -2358,7 +2367,6 @@
 				847B4A4F1CBC97C900207229 /* EaseMessageTimeCell.m in Sources */,
 				847B4AA31CBCEAB900207229 /* EMChooseViewController.m in Sources */,
 				84D976141CB3976D0058F8E4 /* BaseRequestViewModel.swift in Sources */,
-				84D9762C1CB3A9010058F8E4 /* ContectsModel.swift in Sources */,
 				847B4A4C1CBC97C900207229 /* EaseBaseMessageCell.m in Sources */,
 				847B4A191CBC97C900207229 /* EMSDWebImageDownloader.m in Sources */,
 				847B4AA61CBCEAB900207229 /* XHMessageTextView.m in Sources */,
@@ -2401,6 +2409,7 @@
 				847B4A1A1CBC97C900207229 /* EMSDWebImageDownloaderOperation.m in Sources */,
 				847B4A131CBC97C900207229 /* MWTapDetectingView.m in Sources */,
 				847B4A531CBC97C900207229 /* EaseBubbleView+Location.m in Sources */,
+				8452CA1C1CC4DE570049C2F2 /* ContactModel.swift in Sources */,
 				848468301CB6345200312545 /* BottomView.swift in Sources */,
 				847B4A431CBC97C900207229 /* EaseEmotionManager.m in Sources */,
 				84D976101CB397450058F8E4 /* BaseNavigationController.swift in Sources */,
@@ -2409,6 +2418,7 @@
 				847B4A1C1CBC97C900207229 /* EMSDWebImagePrefetcher.m in Sources */,
 				84D975E91CB391D70058F8E4 /* ___.xcdatamodeld in Sources */,
 				847B4AC01CBCEB7500207229 /* InvitationManager.m in Sources */,
+				8452CA141CC4A0850049C2F2 /* ContactGroupViewController.swift in Sources */,
 				847B4A4B1CBC97C900207229 /* EaseUserCell.m in Sources */,
 				847B4A551CBC97C900207229 /* EaseBubbleView+Video.m in Sources */,
 				84D9762A1CB3A8730058F8E4 /* ContactViewModel.swift in Sources */,
