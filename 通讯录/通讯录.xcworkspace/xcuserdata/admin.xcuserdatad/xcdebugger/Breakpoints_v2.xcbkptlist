@@ -4,28 +4,34 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OtherViewController/MainTabBarController.swift"
-            timestampString = "482322364.750926"
+            filePath = "OtherViewController/BaseRequestViewModel.swift"
+            timestampString = "482740623.644539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "didReceiveLocalNotification(_:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "requestNetGet(_:url:headrer:requestSuccess:requestError:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DroupView.swift"
+            timestampString = "482736526.482727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "disMissView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OtherViewController/MainTabBarController.swift"
-            timestampString = "482322366.024715"
+            filePath = "Category/NSObject+CurrentVC.m"
+            timestampString = "482739743.978656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "didReceiveLocalNotification(_:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-getCurrentVC"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -51,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x901a;&#x8baf;&#x5f55;/AppDelegate.swift"
-            timestampString = "482375480.443063"
+            filePath = "Category/NSObject+CurrentVC.m"
+            timestampString = "482739931.73271"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "application(_:didReceiveRemoteNotification:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-getCurrentVC"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -67,13 +73,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x901a;&#x8baf;&#x5f55;/AppDelegate.swift"
-            timestampString = "482375714.310604"
+            filePath = "Category/NSObject+CurrentVC.m"
+            timestampString = "482739933.156863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "application(_:didReceiveLocalNotification:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-getCurrentVC"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginViewController.swift"
+            timestampString = "482741491.527342"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "showHid(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -22,4 +22,6 @@
 - (void)isConnect:(BOOL)isConnect;
 - (void)networkChanged:(EMConnectionState)connectionState;
 
+//- (void)reloadApplyView;
+
 @end

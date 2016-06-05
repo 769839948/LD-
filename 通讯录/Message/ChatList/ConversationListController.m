@@ -22,6 +22,8 @@
 //#import "RobotChatViewController.h"
 #import "UserProfileManager.h"
 #import "RealtimeSearchUtil.h"
+#import "CreateGroupViewController.h"
+#import "ApplyViewController.h"
 
 @implementation EMConversation (search)
 
@@ -32,6 +34,7 @@
 //        if ([[RobotManager sharedInstance] isRobotWithUsername:self.conversationId]) {
 //            return [[RobotManager sharedInstance] getRobotNickWithUsername:self.conversationId];
 //        }
+//        return [[NSUserDefaults standardUserDefaults] objectForKey:self.conversationId];
         return [[UserProfileManager sharedInstance] getNickNameWithUsername:self.conversationId];
     } else if (self.type == EMConversationTypeGroupChat) {
         if ([self.ext objectForKey:@"subject"] || [self.ext objectForKey:@"isPublic"]) {
@@ -47,7 +50,7 @@
 
 @property (nonatomic, strong) UIView *networkStateView;
 @property (nonatomic, strong) EMSearchBar           *searchBar;
-
+@property (nonatomic) NSInteger unapplyCount;
 @property (strong, nonatomic) EMSearchDisplayController *searchController;
 
 @end
@@ -71,11 +74,21 @@
     [self searchController];
     
     [self removeEmptyConversationsFromDB];
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createGroup:)];
 }
+
+//- (void)createGroup:(UIBarButtonItem *)sender
+//{
+//    CreateGroupViewController *createChatroom = [[CreateGroupViewController alloc] init];
+//    [self.navigationController pushViewController:createChatroom animated:YES];
+//}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self reloadApplyView];
     [self refresh];
 }
 
@@ -200,17 +213,8 @@
     if (conversationModel) {
         EMConversation *conversation = conversationModel.conversation;
         if (conversation) {
-//            if ([[RobotManager sharedInstance] isRobotWithUsername:conversation.conversationId]) {
-//                RobotChatViewController *chatController = [[RobotChatViewController alloc] initWithConversationChatter:conversation.conversationId conversationType:conversation.type];
-//                chatController.title = [[RobotManager sharedInstance] getRobotNickWithUsername:conversation.conversationId];
-//                [self.navigationController pushViewController:chatController animated:YES];
-//            } else {
-//                ChatViewController *chatController = [[ChatViewController alloc] initWithConversationChatter:conversation.conversationId conversationType:conversation.type];
-//                chatController.title = conversationModel.title;
-//                [self.navigationController pushViewController:chatController animated:YES];
-//            }
         ChatViewController *chatController = [[ChatViewController alloc] initWithConversationChatter:conversation.conversationId conversationType:conversation.type];
-        chatController.title = conversationModel.title;
+        chatController.title = [[NSUserDefaults standardUserDefaults] objectForKey:conversationModel.title];
         [self.navigationController pushViewController:chatController animated:YES];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"setupUnreadMessageCount" object:nil];
@@ -233,9 +237,12 @@
 //                model.title = profileEntity.nickname == nil ? profileEntity.username : profileEntity.nickname;
 //                model.avatarURLPath = profileEntity.imageUrl;
 //            }
+        model.title = [[NSUserDefaults standardUserDefaults] objectForKey:conversation.conversationId];
         UserProfileEntity *profileEntity = [[UserProfileManager sharedInstance] getUserProfileByUsername:conversation.conversationId];
+        NSLog(@"%@",profileEntity.username);
             if (profileEntity) {
-                model.title = profileEntity.nickname == nil ? profileEntity.username : profileEntity.nickname;
+//                model.title = [[NSUserDefaults standardUserDefaults] objectForKey:profileEntity.username];
+                model.title = profileEntity.nickname == nil ? [[NSUserDefaults standardUserDefaults] objectForKey:profileEntity.username] : profileEntity.nickname;
                 model.avatarURLPath = profileEntity.imageUrl;
         }
     } else if (model.conversation.type == EMConversationTypeGroupChat) {
@@ -385,5 +392,7 @@
         self.tableView.tableHeaderView = nil;
     }
 }
+
+
 
 @end

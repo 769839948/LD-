@@ -11,15 +11,12 @@
  */
 
 #import <Foundation/Foundation.h>
-//#import "通讯录-Swift.h"
 #import "ConversationListController.h"
-//#import "ContactListViewController.h"
-//#import "通讯录-Swift.h"
+
 #import "ChatViewController.h"
+#import "MainTabBarController.h"
 
 #if DEMO_CALL == 1
-
-#import "CallViewController.h"
 
 @interface ChatDemoHelper : NSObject <EMClientDelegate,EMChatManagerDelegate,EMContactManagerDelegate,EMGroupManagerDelegate,EMChatroomManagerDelegate,EMCallManagerDelegate>
 
@@ -33,7 +30,7 @@
 
 @property (nonatomic, weak) ConversationListController *conversationListVC;
 
-//@property (nonatomic, weak) MainTabBarController *mainVC;
+@property (nonatomic, weak) MainTabBarController *mainVC;
 
 @property (nonatomic, weak) ChatViewController *chatVC;
 

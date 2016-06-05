@@ -31,8 +31,12 @@
     id nextResponder = [frontView nextResponder];
     if ([nextResponder isKindOfClass:[UIViewController class]])
         result = nextResponder;
-    else
+    else if([nextResponder isKindOfClass:[UINavigationController class]]){
+        
+//        result = nextResponder.r
+    }else{
         result = window.rootViewController;
+    }
     return result;
 }
 

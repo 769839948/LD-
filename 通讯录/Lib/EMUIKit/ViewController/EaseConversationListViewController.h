@@ -87,6 +87,8 @@ typedef NS_ENUM(int, DXDeleteConvesationType) {
 @property (weak, nonatomic) id<EaseConversationListViewControllerDelegate> delegate;
 @property (weak, nonatomic) id<EaseConversationListViewControllerDataSource> dataSource;
 
+
+
 /*!
  @method
  @brief 下拉加载更多
@@ -102,5 +104,7 @@ typedef NS_ENUM(int, DXDeleteConvesationType) {
  @result
  */
 - (void)refreshAndSortView;
+
+- (void)reloadApplyView;
 
 @end

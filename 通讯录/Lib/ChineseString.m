@@ -56,33 +56,41 @@
         
         if (((ChineseString*)object).pinYin.length > 0) {
             NSString *pinyin = [((ChineseString*)object).pinYin substringToIndex:1];
+//            NSLog(@"%@",pinyin);
+//            NSLog(@"object===%@",((ChineseString*)object).pinYin);
             NSString *string = ((ChineseString*)object).string;
-            
+//            if(![tempString isEqualToString:pinyin])
+//            {
+//                // NSLog(@"IndexArray----->%@",pinyin);
+//                [LetterResult addObject:pinyin];
+//                tempString = pinyin;
+//            }
             //不同
             if(![tempString isEqualToString:pinyin] )
             {
+                tempString = pinyin;
+                item = [NSMutableArray array];
                 for (int i = 0; i < array.count; i++ ){
                     Contacts *contact = (Contacts *)array[i];
                     if ([[NSString stringWithFormat:@"%@",contact.username] isEqualToString:string]) {
-                        item = [NSMutableArray array];
                         [item  addObject:contact];
                         [LetterResult addObject:item];
-                        break;
                     }
+                    
                 }
                 //            //分组
                 //            item = [NSMutableArray array];
                 //            [item  addObject:string];
                 //            [LetterResult addObject:item];
                 //遍历
-                tempString = pinyin;
+                
             }else//相同
             {
                 for (int i = 0; i < array.count; i++ ){
                     Contacts *contact = (Contacts *)array[i];
                     if ([[NSString stringWithFormat:@"%@",contact.username] isEqualToString:string]) {
                         [item  addObject:contact];
-                        break;
+//                        break;
                     }
                 }
                 //            [item  addObject:string];

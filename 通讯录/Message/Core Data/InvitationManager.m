@@ -40,16 +40,16 @@ static InvitationManager *sharedInstance = nil;
 }
 
 -(void)addInvitation:(ApplyEntity *)applyEntity loginUser:(NSString *)username{
-    NSData *defalutData = [_defaults objectForKey:username];
+    NSData *defalutData = [_defaults objectForKey:[NSString stringWithFormat:@"aa%@",username]];
     NSArray *ary = [NSKeyedUnarchiver unarchiveObjectWithData:defalutData];
     NSMutableArray *appleys = [[NSMutableArray alloc] initWithArray:ary];
     [appleys addObject:applyEntity];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:appleys];
-    [_defaults setObject:data forKey:username];
+    [_defaults setObject:data forKey:[NSString stringWithFormat:@"aa%@",username]];
 }
 
 -(void)removeInvitation:(ApplyEntity *)applyEntity loginUser:(NSString *)username{
-    NSData *defalutData = [_defaults objectForKey:username];
+    NSData *defalutData = [_defaults objectForKey:[NSString stringWithFormat:@"aa%@",username]];
     NSArray *ary = [NSKeyedUnarchiver unarchiveObjectWithData:defalutData];
     NSMutableArray *appleys = [[NSMutableArray alloc] initWithArray:ary];
     ApplyEntity *needDelete;
@@ -62,11 +62,11 @@ static InvitationManager *sharedInstance = nil;
     }
     [appleys removeObject:needDelete];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:appleys];
-    [_defaults setObject:data forKey:username];
+    [_defaults setObject:data forKey:[NSString stringWithFormat:@"aa%@",username]];
 }
 
 -(NSArray *)applyEmtitiesWithloginUser:(NSString *)username{
-    NSData *defalutData = [_defaults objectForKey:username];
+    NSData *defalutData = [_defaults objectForKey:[NSString stringWithFormat:@"aa%@",username]];
     NSArray *ary = [NSKeyedUnarchiver unarchiveObjectWithData:defalutData];
     return ary;
 }

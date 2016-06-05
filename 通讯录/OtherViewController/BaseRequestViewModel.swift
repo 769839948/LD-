@@ -12,9 +12,10 @@ import MJExtension
 import Alamofire
 import ReactiveCocoa
 
-typealias successRequestClosure = (response:AnyObject, data:AnyObject) -> Void
-typealias errorRequestClosure = (string:AnyObject) -> Void
-typealias netErrorRequestClosure = (string:AnyObject) -> Void
+typealias successRequestClosure = (response:AnyObject) -> Void
+typealias errorRequestClosure = (error:AnyObject) -> Void
+typealias netErrorRequestClosure = (error:AnyObject) -> Void
+typealias hidderHid = (msg:String) -> Void
 
 class BaseRequestViewModel: NSObject {
     
@@ -22,26 +23,24 @@ class BaseRequestViewModel: NSObject {
     var successClosure:successRequestClosure!
     var errorClosure:errorRequestClosure!
     var netErrorClosure:netErrorRequestClosure!
-    
+    var hidder:hidderHid!
     func requestNetGet(parameter:NSDictionary, url:String, headrer:[String:String]?, requestSuccess:successRequestClosure, requestError:errorRequestClosure) {
-        Alamofire.request(.GET, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.JSON, headers: nil).response { (request, response, data, error) -> Void in
-            if error != nil{
-                requestError(string: error!)
+        Alamofire.request(.GET, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.URL, headers: nil).responseJSON { (response) -> Void in
+            if response.result.error == nil{
+                requestSuccess(response:response.result.value!)
             }else{
-                requestSuccess(response: response!, data: data!)
+                requestError(error: response.result.error!)
             }
-            
         }
     }
     
     func requestNetPost(parameter:NSDictionary, url:String, headrer:[String:String]?, requestSuccess:successRequestClosure, requestError:errorRequestClosure) {
-        Alamofire.request(.POST, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.JSON, headers: nil).response { (request, response, data, error) -> Void in
-            if error != nil{
-                requestError(string: error!)
+        Alamofire.request(.POST, url, parameters: parameter as? [String : AnyObject], encoding: ParameterEncoding.URL, headers: nil).responseJSON { (response) -> Void in
+            if response.result.error == nil{
+                requestSuccess(response:response.result.value!)
             }else{
-                requestSuccess(response: response!, data: data!)
+                requestError(error: response.result.error!)
             }
-            
         }
     }
 }

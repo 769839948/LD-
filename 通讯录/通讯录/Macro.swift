@@ -14,9 +14,18 @@ import SDWebImage
 import SnapKit
 import Alamofire
 
-let BaseUrl = "http://localhost:8080/Contact/"
+let BaseUrl = "http://zhangs-macbook-pro.local:8080/Contact/"
+let RequestLogin = "userLogin"
 let GetCompanyUser = "getCompanyUserAction"
 let GetCompanyGroup = "getCompanyGroup"
+let GetAllCompany = "getCompanyAction"
+let ChangeContact = "changeContactAction"
+let RegisterAction = "userRegister"
+let ChangePasswordAction = "changePassword"
+
+let JPushappKey = "e019de7de82ef898f36fda81"
+let JPushappMaster = "d648b6a385ba46c9005a448d"
+let channel = "Publish channel"
 
 let UISCREEN_SIZE = UIScreen.mainScreen().bounds
 

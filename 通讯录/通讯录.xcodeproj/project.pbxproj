@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F102EFB1CEE987D00C9132F /* NotifyObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F102EF61CEE987D00C9132F /* NotifyObj.m */; };
+		1F102EFC1CEE987D00C9132F /* NotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F102EF81CEE987D00C9132F /* NotificationView.m */; };
+		1F102EFD1CEE987D00C9132F /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F102EFA1CEE987D00C9132F /* MessageModel.m */; };
+		1F102EFF1CEE98FF00C9132F /* JPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F102EFE1CEE98FF00C9132F /* JPush.swift */; };
+		1F102F031CEE9C9800C9132F /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F102F011CEE9C9800C9132F /* jpush-ios-2.1.0.a */; };
+		1F1BD16D1CE1C29A0005FEDC /* CreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BD16C1CE1C29A0005FEDC /* CreateGroupViewController.m */; };
+		1F1BD1701CE1C4000005FEDC /* ContactSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BD16F1CE1C4000005FEDC /* ContactSelectionViewController.m */; };
+		1F3FE0681CCB8F3600F82EE4 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3FE0671CCB8F3600F82EE4 /* EditTableViewCell.swift */; };
+		1F5535871CE2268F009E18E7 /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5535861CE2268F009E18E7 /* ApplyViewController.m */; };
+		1F55358A1CE226A9009E18E7 /* GroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5535891CE226A9009E18E7 /* GroupListViewController.m */; };
+		1F55358D1CE226F6009E18E7 /* ApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F55358C1CE226F6009E18E7 /* ApplyFriendCell.m */; };
+		1F5535901CE22740009E18E7 /* PublicGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F55358F1CE22740009E18E7 /* PublicGroupListViewController.m */; };
+		1F5535931CE2275A009E18E7 /* PublicGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5535921CE2275A009E18E7 /* PublicGroupDetailViewController.m */; };
+		1FA5D79E1CE2BA0400BFBD99 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D79D1CE2BA0400BFBD99 /* MainTabBarController.m */; };
+		1FA5D7A11CE2D9D000BFBD99 /* ChatGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7A01CE2D9D000BFBD99 /* ChatGroupDetailViewController.m */; };
+		1FA5D7A41CE2DA2800BFBD99 /* GroupSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7A31CE2DA2800BFBD99 /* GroupSettingViewController.m */; };
+		1FA5D7A71CE2DA3D00BFBD99 /* ContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7A61CE2DA3D00BFBD99 /* ContactView.m */; };
+		1FA5D7AA1CE2DA4F00BFBD99 /* GroupBansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7A91CE2DA4F00BFBD99 /* GroupBansViewController.m */; };
+		1FA5D7AD1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7AC1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.m */; };
+		1FA5D7B01CE2DAC400BFBD99 /* SearchMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7AF1CE2DAC400BFBD99 /* SearchMessageViewController.m */; };
+		1FA5D7B31CE2DC2F00BFBD99 /* SearchChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7B21CE2DC2F00BFBD99 /* SearchChatViewController.m */; };
+		1FA5D7BA1CE30BE500BFBD99 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5D7B91CE30BE500BFBD99 /* ChangePasswordViewController.swift */; };
+		1FBE26F61CDD8E6700489BDD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE26F51CDD8E6700489BDD /* RegisterViewController.swift */; };
+		1FD7DBB61CCC5DC800236F55 /* ContactModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7DBB41CCC5DC800236F55 /* ContactModel.xcdatamodeld */; };
+		1FD7DBC41CCC606900236F55 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD7DBC31CCC606900236F55 /* CoreData.framework */; };
+		1FD7DBCD1CCC60DF00236F55 /* CoreDateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7DBCC1CCC60DF00236F55 /* CoreDateMethod.m */; };
+		1FEB5D791CCB5EC600C44E72 /* OldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB5D781CCB5EC600C44E72 /* OldViewController.swift */; };
+		1FEB5D7B1CCB5EF900C44E72 /* ContactManageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB5D7A1CCB5EF900C44E72 /* ContactManageController.swift */; };
 		8452CA141CC4A0850049C2F2 /* ContactGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452CA131CC4A0850049C2F2 /* ContactGroupViewController.swift */; };
 		8452CA171CC4BA0B0049C2F2 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452CA161CC4BA0B0049C2F2 /* GroupModel.m */; };
 		8452CA1C1CC4DE570049C2F2 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452CA1B1CC4DE570049C2F2 /* ContactModel.swift */; };
@@ -268,6 +296,12 @@
 		847F894C1CBE086D0008D8B5 /* tabbarSelectBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 847F88DC1CBE086D0008D8B5 /* tabbarSelectBg@2x.png */; };
 		848468301CB6345200312545 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484682F1CB6345200312545 /* BottomView.swift */; };
 		848468381CB6631700312545 /* EdiltContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848468371CB6631700312545 /* EdiltContactViewController.swift */; };
+		84B696161CC5C48100D90A58 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B696151CC5C48100D90A58 /* UserModel.swift */; };
+		84B696181CC5C95600D90A58 /* DroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B696171CC5C95600D90A58 /* DroupView.swift */; };
+		84B6961E1CC612BD00D90A58 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6961D1CC612BD00D90A58 /* MineViewController.swift */; };
+		84B696201CC616BF00D90A58 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6961F1CC616BF00D90A58 /* MineViewModel.swift */; };
+		84B696221CC625E300D90A58 /* HistoryMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B696211CC625E300D90A58 /* HistoryMessageViewController.swift */; };
+		84B696241CC6265300D90A58 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B696231CC6265300D90A58 /* AboutViewController.swift */; };
 		84BC34E31CB4A5220021E96B /* ContectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */; };
 		84BC34EC1CB4B4FE0021E96B /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BC34EB1CB4B4FE0021E96B /* Contacts.framework */; };
 		84BC34EE1CB4B5060021E96B /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BC34ED1CB4B5060021E96B /* ContactsUI.framework */; };
@@ -288,7 +322,6 @@
 		84D975E91CB391D70058F8E4 /* ___.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D975E71CB391D70058F8E4 /* ___.xcdatamodeld */; };
 		84D975EB1CB391D70058F8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D975EA1CB391D70058F8E4 /* Assets.xcassets */; };
 		84D975EE1CB391D70058F8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D975EC1CB391D70058F8E4 /* LaunchScreen.storyboard */; };
-		84D9760D1CB3970D0058F8E4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9760C1CB3970D0058F8E4 /* MainTabBarController.swift */; };
 		84D976101CB397450058F8E4 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9760F1CB397450058F8E4 /* BaseNavigationController.swift */; };
 		84D976121CB397550058F8E4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976111CB397550058F8E4 /* BaseViewController.swift */; };
 		84D976141CB3976D0058F8E4 /* BaseRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D976131CB3976D0058F8E4 /* BaseRequestViewModel.swift */; };
@@ -303,6 +336,54 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F102EF51CEE987D00C9132F /* NotifyObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyObj.h; sourceTree = "<group>"; };
+		1F102EF61CEE987D00C9132F /* NotifyObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyObj.m; sourceTree = "<group>"; };
+		1F102EF71CEE987D00C9132F /* NotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationView.h; sourceTree = "<group>"; };
+		1F102EF81CEE987D00C9132F /* NotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationView.m; sourceTree = "<group>"; };
+		1F102EF91CEE987D00C9132F /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		1F102EFA1CEE987D00C9132F /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		1F102EFE1CEE98FF00C9132F /* JPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPush.swift; sourceTree = "<group>"; };
+		1F102F011CEE9C9800C9132F /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		1F102F021CEE9C9800C9132F /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		1F1BD16B1CE1C29A0005FEDC /* CreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateGroupViewController.h; sourceTree = "<group>"; };
+		1F1BD16C1CE1C29A0005FEDC /* CreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateGroupViewController.m; sourceTree = "<group>"; };
+		1F1BD16E1CE1C4000005FEDC /* ContactSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactSelectionViewController.h; sourceTree = "<group>"; };
+		1F1BD16F1CE1C4000005FEDC /* ContactSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactSelectionViewController.m; sourceTree = "<group>"; };
+		1F3FE0671CCB8F3600F82EE4 /* EditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
+		1F5535851CE2268F009E18E7 /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
+		1F5535861CE2268F009E18E7 /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
+		1F5535881CE226A9009E18E7 /* GroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListViewController.h; sourceTree = "<group>"; };
+		1F5535891CE226A9009E18E7 /* GroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListViewController.m; sourceTree = "<group>"; };
+		1F55358B1CE226F6009E18E7 /* ApplyFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyFriendCell.h; sourceTree = "<group>"; };
+		1F55358C1CE226F6009E18E7 /* ApplyFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyFriendCell.m; sourceTree = "<group>"; };
+		1F55358E1CE22740009E18E7 /* PublicGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicGroupListViewController.h; sourceTree = "<group>"; };
+		1F55358F1CE22740009E18E7 /* PublicGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicGroupListViewController.m; sourceTree = "<group>"; };
+		1F5535911CE2275A009E18E7 /* PublicGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicGroupDetailViewController.h; sourceTree = "<group>"; };
+		1F5535921CE2275A009E18E7 /* PublicGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicGroupDetailViewController.m; sourceTree = "<group>"; };
+		1FA5D79C1CE2BA0400BFBD99 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		1FA5D79D1CE2BA0400BFBD99 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		1FA5D79F1CE2D9D000BFBD99 /* ChatGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatGroupDetailViewController.h; sourceTree = "<group>"; };
+		1FA5D7A01CE2D9D000BFBD99 /* ChatGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatGroupDetailViewController.m; sourceTree = "<group>"; };
+		1FA5D7A21CE2DA2800BFBD99 /* GroupSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSettingViewController.h; sourceTree = "<group>"; };
+		1FA5D7A31CE2DA2800BFBD99 /* GroupSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSettingViewController.m; sourceTree = "<group>"; };
+		1FA5D7A51CE2DA3D00BFBD99 /* ContactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactView.h; sourceTree = "<group>"; };
+		1FA5D7A61CE2DA3D00BFBD99 /* ContactView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactView.m; sourceTree = "<group>"; };
+		1FA5D7A81CE2DA4F00BFBD99 /* GroupBansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBansViewController.h; sourceTree = "<group>"; };
+		1FA5D7A91CE2DA4F00BFBD99 /* GroupBansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBansViewController.m; sourceTree = "<group>"; };
+		1FA5D7AB1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSubjectChangingViewController.h; sourceTree = "<group>"; };
+		1FA5D7AC1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSubjectChangingViewController.m; sourceTree = "<group>"; };
+		1FA5D7AE1CE2DAC400BFBD99 /* SearchMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMessageViewController.h; sourceTree = "<group>"; };
+		1FA5D7AF1CE2DAC400BFBD99 /* SearchMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMessageViewController.m; sourceTree = "<group>"; };
+		1FA5D7B11CE2DC2F00BFBD99 /* SearchChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchChatViewController.h; sourceTree = "<group>"; };
+		1FA5D7B21CE2DC2F00BFBD99 /* SearchChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchChatViewController.m; sourceTree = "<group>"; };
+		1FA5D7B91CE30BE500BFBD99 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		1FBE26F51CDD8E6700489BDD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1FD7DBB51CCC5DC800236F55 /* ContactModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactModel.xcdatamodel; sourceTree = "<group>"; };
+		1FD7DBC31CCC606900236F55 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1FD7DBCB1CCC60DF00236F55 /* CoreDateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDateMethod.h; sourceTree = "<group>"; };
+		1FD7DBCC1CCC60DF00236F55 /* CoreDateMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDateMethod.m; sourceTree = "<group>"; };
+		1FEB5D781CCB5EC600C44E72 /* OldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldViewController.swift; sourceTree = "<group>"; };
+		1FEB5D7A1CCB5EF900C44E72 /* ContactManageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactManageController.swift; sourceTree = "<group>"; };
 		5B2860A10E15AFAE9AB75732 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6527FEBB8DA431473E4EDF8D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8452CA131CC4A0850049C2F2 /* ContactGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactGroupViewController.swift; sourceTree = "<group>"; };
@@ -745,6 +826,12 @@
 		847F88DC1CBE086D0008D8B5 /* tabbarSelectBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarSelectBg@2x.png"; sourceTree = "<group>"; };
 		8484682F1CB6345200312545 /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		848468371CB6631700312545 /* EdiltContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdiltContactViewController.swift; sourceTree = "<group>"; };
+		84B696151CC5C48100D90A58 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		84B696171CC5C95600D90A58 /* DroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroupView.swift; sourceTree = "<group>"; };
+		84B6961D1CC612BD00D90A58 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		84B6961F1CC616BF00D90A58 /* MineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
+		84B696211CC625E300D90A58 /* HistoryMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryMessageViewController.swift; sourceTree = "<group>"; };
+		84B696231CC6265300D90A58 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContectDetailViewController.swift; sourceTree = "<group>"; };
 		84BC34E41CB4AB3B0021E96B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		84BC34E61CB4AB420021E96B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -778,7 +865,6 @@
 		84D975EF1CB391D70058F8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D975F81CB391D80058F8E4 /* ___UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___UITests.swift"; sourceTree = "<group>"; };
 		84D975FA1CB391D80058F8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D9760C1CB3970D0058F8E4 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		84D9760F1CB397450058F8E4 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		84D976111CB397550058F8E4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84D976131CB3976D0058F8E4 /* BaseRequestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestViewModel.swift; sourceTree = "<group>"; };
@@ -797,6 +883,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F102F031CEE9C9800C9132F /* jpush-ios-2.1.0.a in Frameworks */,
+				1FD7DBC41CCC606900236F55 /* CoreData.framework in Frameworks */,
 				8461232B1CB799A9008CECDD /* libiconv.tbd in Frameworks */,
 				847B49F61CBC97C800207229 /* libopencore-amrnb.a in Frameworks */,
 				846123291CB799A0008CECDD /* libsqlite3.tbd in Frameworks */,
@@ -822,6 +910,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F102EF01CEE981A00C9132F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F102F001CEE9C9800C9132F /* JPushlib */,
+				1F102EF41CEE986D00C9132F /* Notification */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		1F102EF41CEE986D00C9132F /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				1F102EF51CEE987D00C9132F /* NotifyObj.h */,
+				1F102EF61CEE987D00C9132F /* NotifyObj.m */,
+				1F102EF71CEE987D00C9132F /* NotificationView.h */,
+				1F102EF81CEE987D00C9132F /* NotificationView.m */,
+				1F102EF91CEE987D00C9132F /* MessageModel.h */,
+				1F102EFA1CEE987D00C9132F /* MessageModel.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		1F102F001CEE9C9800C9132F /* JPushlib */ = {
+			isa = PBXGroup;
+			children = (
+				1F102F011CEE9C9800C9132F /* jpush-ios-2.1.0.a */,
+				1F102F021CEE9C9800C9132F /* JPUSHService.h */,
+			);
+			path = JPushlib;
+			sourceTree = "<group>";
+		};
+		1F1BD16A1CE1C27A0005FEDC /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5D7A51CE2DA3D00BFBD99 /* ContactView.h */,
+				1FA5D7A61CE2DA3D00BFBD99 /* ContactView.m */,
+				1F1BD16B1CE1C29A0005FEDC /* CreateGroupViewController.h */,
+				1F1BD16C1CE1C29A0005FEDC /* CreateGroupViewController.m */,
+				1FA5D7A81CE2DA4F00BFBD99 /* GroupBansViewController.h */,
+				1FA5D7A91CE2DA4F00BFBD99 /* GroupBansViewController.m */,
+				1FA5D7AB1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.h */,
+				1FA5D7AC1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.m */,
+				1F1BD16E1CE1C4000005FEDC /* ContactSelectionViewController.h */,
+				1F1BD16F1CE1C4000005FEDC /* ContactSelectionViewController.m */,
+				1FA5D79F1CE2D9D000BFBD99 /* ChatGroupDetailViewController.h */,
+				1FA5D7A01CE2D9D000BFBD99 /* ChatGroupDetailViewController.m */,
+				1F5535881CE226A9009E18E7 /* GroupListViewController.h */,
+				1F5535891CE226A9009E18E7 /* GroupListViewController.m */,
+				1F55358E1CE22740009E18E7 /* PublicGroupListViewController.h */,
+				1F55358F1CE22740009E18E7 /* PublicGroupListViewController.m */,
+				1F5535911CE2275A009E18E7 /* PublicGroupDetailViewController.h */,
+				1F5535921CE2275A009E18E7 /* PublicGroupDetailViewController.m */,
+				1FA5D7A21CE2DA2800BFBD99 /* GroupSettingViewController.h */,
+				1FA5D7A31CE2DA2800BFBD99 /* GroupSettingViewController.m */,
+				1FA5D7AE1CE2DAC400BFBD99 /* SearchMessageViewController.h */,
+				1FA5D7AF1CE2DAC400BFBD99 /* SearchMessageViewController.m */,
+				1FA5D7B11CE2DC2F00BFBD99 /* SearchChatViewController.h */,
+				1FA5D7B21CE2DC2F00BFBD99 /* SearchChatViewController.m */,
+			);
+			name = Group;
+			sourceTree = "<group>";
+		};
+		1F5535841CE22680009E18E7 /* FriendApply */ = {
+			isa = PBXGroup;
+			children = (
+				1F55358B1CE226F6009E18E7 /* ApplyFriendCell.h */,
+				1F55358C1CE226F6009E18E7 /* ApplyFriendCell.m */,
+				1F5535851CE2268F009E18E7 /* ApplyViewController.h */,
+				1F5535861CE2268F009E18E7 /* ApplyViewController.m */,
+			);
+			name = FriendApply;
+			sourceTree = "<group>";
+		};
+		1FD7DBB31CCC5DAE00236F55 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1FD7DBB41CCC5DC800236F55 /* ContactModel.xcdatamodeld */,
+				1FD7DBCB1CCC60DF00236F55 /* CoreDateMethod.h */,
+				1FD7DBCC1CCC60DF00236F55 /* CoreDateMethod.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		719C10E94462911F8E185B2C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -834,6 +1005,7 @@
 		73EFE5A9E711D6C229F0321D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FD7DBC31CCC606900236F55 /* CoreData.framework */,
 				8461232A1CB799A9008CECDD /* libiconv.tbd */,
 				846123281CB799A0008CECDD /* libsqlite3.tbd */,
 				846123261CB79998008CECDD /* libstdc++.6.0.9.tbd */,
@@ -929,6 +1101,7 @@
 		847B48C11CBC8AA700207229 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84B696151CC5C48100D90A58 /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -940,6 +1113,7 @@
 				847B4A691CBCA47A00207229 /* YoshikoTextField.m */,
 				847B4A6B1CBCD10100207229 /* IchiroTextField.h */,
 				847B4A6C1CBCD10100207229 /* IchiroTextField.m */,
+				84B696171CC5C95600D90A58 /* DroupView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -948,6 +1122,7 @@
 			isa = PBXGroup;
 			children = (
 				847B48C51CBC8AE100207229 /* LoginViewController.swift */,
+				1FBE26F51CDD8E6700489BDD /* RegisterViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1480,13 +1655,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		847B4AA71CBCEAED00207229 /* Robot */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Robot;
-			sourceTree = "<group>";
-		};
 		847B4AB71CBCEB3700207229 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1772,6 +1940,39 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
+		84B696191CC6129100D90A58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84B6961A1CC6129800D90A58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84B6961B1CC6129F00D90A58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84B6961D1CC612BD00D90A58 /* MineViewController.swift */,
+				84B696211CC625E300D90A58 /* HistoryMessageViewController.swift */,
+				84B696231CC6265300D90A58 /* AboutViewController.swift */,
+				1FA5D7B91CE30BE500BFBD99 /* ChangePasswordViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		84B6961C1CC612A700D90A58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B6961F1CC616BF00D90A58 /* MineViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		84BC34F71CB4CF420021E96B /* Bridging */ = {
 			isa = PBXGroup;
 			children = (
@@ -1814,6 +2015,8 @@
 		84D975D41CB391D70058F8E4 = {
 			isa = PBXGroup;
 			children = (
+				1F102EF01CEE981A00C9132F /* Utils */,
+				1FD7DBB31CCC5DAE00236F55 /* CoreData */,
 				847B48C01CBC8A9D00207229 /* Login */,
 				84D9760A1CB396C70058F8E4 /* OtherViewController */,
 				84D976071CB3969F0058F8E4 /* Contact */,
@@ -1844,6 +2047,7 @@
 				847B4A641CBC9DD100207229 /* AppDelegate+EaseMob.swift */,
 				84D975E21CB391D70058F8E4 /* ViewController.swift */,
 				84D976151CB3978E0058F8E4 /* Macro.swift */,
+				1F102EFE1CEE98FF00C9132F /* JPush.swift */,
 				84BC34EF1CB4CDD00021E96B /* cities.plist */,
 				84D975E41CB391D70058F8E4 /* Main.storyboard */,
 				84D975EA1CB391D70058F8E4 /* Assets.xcassets */,
@@ -1946,6 +2150,10 @@
 		84D976091CB3969F0058F8E4 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				84B6961C1CC612A700D90A58 /* ViewModel */,
+				84B6961B1CC6129F00D90A58 /* Controller */,
+				84B6961A1CC6129800D90A58 /* Model */,
+				84B696191CC6129100D90A58 /* View */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1973,7 +2181,8 @@
 		84D9760E1CB397120058F8E4 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				84D9760C1CB3970D0058F8E4 /* MainTabBarController.swift */,
+				1FA5D79C1CE2BA0400BFBD99 /* MainTabBarController.h */,
+				1FA5D79D1CE2BA0400BFBD99 /* MainTabBarController.m */,
 			);
 			name = TabBarController;
 			sourceTree = "<group>";
@@ -1993,6 +2202,7 @@
 			children = (
 				84BC34F91CB4D62F0021E96B /* SearchResultTable.swift */,
 				8484682F1CB6345200312545 /* BottomView.swift */,
+				1F3FE0671CCB8F3600F82EE4 /* EditTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2000,6 +2210,8 @@
 		84D976191CB39BB50058F8E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FEB5D7A1CCB5EF900C44E72 /* ContactManageController.swift */,
+				1FEB5D781CCB5EC600C44E72 /* OldViewController.swift */,
 				84D9761B1CB39BD70058F8E4 /* ContactViewController.swift */,
 				84BC34E21CB4A5220021E96B /* ContectDetailViewController.swift */,
 				848468371CB6631700312545 /* EdiltContactViewController.swift */,
@@ -2035,8 +2247,9 @@
 		84D9761F1CB39BE70058F8E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F5535841CE22680009E18E7 /* FriendApply */,
+				1F1BD16A1CE1C27A0005FEDC /* Group */,
 				847B4AB71CBCEB3700207229 /* Profile */,
-				847B4AA71CBCEAED00207229 /* Robot */,
 				847B4A791CBCE08E00207229 /* ChatList */,
 				847B4A7C1CBCE08E00207229 /* ChatView */,
 				84D976211CB39C040058F8E4 /* MessageViewController.swift */,
@@ -2086,7 +2299,7 @@
 				TargetAttributes = {
 					84D975DC1CB391D70058F8E4 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 965VX6GTWH;
+						DevelopmentTeam = VRXD8W8F2P;
 					};
 				};
 			};
@@ -2296,10 +2509,15 @@
 				847B4AA51CBCEAB900207229 /* EMSearchDisplayController.m in Sources */,
 				847B4A2A1CBC97C900207229 /* PSTCollectionViewData.m in Sources */,
 				847B4AE31CBCF28600207229 /* SRSlimeView.m in Sources */,
+				1F5535901CE22740009E18E7 /* PublicGroupListViewController.m in Sources */,
+				84B696201CC616BF00D90A58 /* MineViewModel.swift in Sources */,
 				847B4A5F1CBC97C900207229 /* EaseRecordView.m in Sources */,
 				847B4A0E1CBC97C900207229 /* MWGridCell.m in Sources */,
 				84BDD0361CBF697D00BE31C7 /* UIViewController+Umeng.m in Sources */,
 				847B48C61CBC8AE100207229 /* LoginViewController.swift in Sources */,
+				1F55358A1CE226A9009E18E7 /* GroupListViewController.m in Sources */,
+				1F5535931CE2275A009E18E7 /* PublicGroupDetailViewController.m in Sources */,
+				1FA5D7A41CE2DA2800BFBD99 /* GroupSettingViewController.m in Sources */,
 				84BDCFE41CBF3FDA00BE31C7 /* AppDelegate+UM.swift in Sources */,
 				84BC350A1CB4F4F00021E96B /* pinyin.c in Sources */,
 				847B4A2C1CBC97C900207229 /* PSTCollectionViewItemKey.m in Sources */,
@@ -2311,16 +2529,21 @@
 				847B4ACE1CBCF27000207229 /* EMAlertView.m in Sources */,
 				847B4A141CBC97C900207229 /* MWZoomingScrollView.m in Sources */,
 				847B4AA21CBCEAB900207229 /* BaseViewController.m in Sources */,
+				1FBE26F61CDD8E6700489BDD /* RegisterViewController.swift in Sources */,
 				847B49F51CBC97C800207229 /* EMVoiceConverter.mm in Sources */,
 				847B4A2D1CBC97C900207229 /* PSTCollectionViewLayout.m in Sources */,
 				847B4A571CBC97C900207229 /* EaseBubbleView.m in Sources */,
+				1FA5D7BA1CE30BE500BFBD99 /* ChangePasswordViewController.swift in Sources */,
 				84BDD0331CBF697C00BE31C7 /* CoreUMeng.m in Sources */,
 				847B4A451CBC97C900207229 /* EaseConversationListViewController.m in Sources */,
+				1FA5D7A71CE2DA3D00BFBD99 /* ContactView.m in Sources */,
 				847B4A231CBC97C900207229 /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				847B4A3A1CBC97C900207229 /* NSString+Valid.m in Sources */,
 				847B4A221CBC97C900207229 /* UIImage+EMWebP.m in Sources */,
+				1FA5D7A11CE2D9D000BFBD99 /* ChatGroupDetailViewController.m in Sources */,
 				847B4A521CBC97C900207229 /* EaseBubbleView+Image.m in Sources */,
 				847B4A391CBC97C900207229 /* NSDateFormatter+Category.m in Sources */,
+				1F1BD1701CE1C4000005FEDC /* ContactSelectionViewController.m in Sources */,
 				847B4A161CBC97C900207229 /* EMSDImageCache.m in Sources */,
 				847B49ED1CBC97C800207229 /* EMAudioRecorderUtil.m in Sources */,
 				847B4AA41CBCEAB900207229 /* EMNavigationController.m in Sources */,
@@ -2331,6 +2554,7 @@
 				847B4A751CBCDE3900207229 /* NSObject+CurrentVC.m in Sources */,
 				847B4ACA1CBCECB000207229 /* UIResponder+Router.m in Sources */,
 				847B4A201CBC97C900207229 /* UIImage+EMGIF.m in Sources */,
+				1F1BD16D1CE1C29A0005FEDC /* CreateGroupViewController.m in Sources */,
 				847B4A7F1CBCE08E00207229 /* ConversationListController.m in Sources */,
 				847B4A341CBC97C900207229 /* EaseSDKHelper.m in Sources */,
 				847B4A721CBCDCE600207229 /* UIView+CurrentController.m in Sources */,
@@ -2340,23 +2564,28 @@
 				847B4A311CBC97C900207229 /* PSTGridLayoutRow.m in Sources */,
 				847B4AA11CBCEAB900207229 /* EMRemarkImageView.m in Sources */,
 				847B4A581CBC97C900207229 /* EaseChatToolbar.m in Sources */,
+				1FA5D79E1CE2BA0400BFBD99 /* MainTabBarController.m in Sources */,
 				847B4A5B1CBC97C900207229 /* EaseTextView.m in Sources */,
 				847B4A1B1CBC97C900207229 /* EMSDWebImageManager.m in Sources */,
 				847B4AD71CBCF27F00207229 /* TTGlobalUICommon.m in Sources */,
 				847B4A3B1CBC97C900207229 /* UIViewController+DismissKeyboard.m in Sources */,
 				847B4A5D1CBC97C900207229 /* EaseFacialView.m in Sources */,
+				1FEB5D791CCB5EC600C44E72 /* OldViewController.swift in Sources */,
 				847B4A1F1CBC97C900207229 /* UIButton+EMWebCache.m in Sources */,
 				847B49EE1CBC97C800207229 /* EMCDDeviceManager+Media.m in Sources */,
 				847B4A351CBC97C900207229 /* EaseConversationModel.m in Sources */,
 				84BDD0351CBF697D00BE31C7 /* CoreUmengShare.m in Sources */,
 				84D976161CB3978E0058F8E4 /* Macro.swift in Sources */,
+				84B696181CC5C95600D90A58 /* DroupView.swift in Sources */,
 				847B4A9F1CBCEAB900207229 /* EMSearchBar.m in Sources */,
 				847B4A9E1CBCEAB900207229 /* BaseTableViewCell.m in Sources */,
 				847B4A241CBC97C900207229 /* UIImageView+EMWebCache.m in Sources */,
 				847B4A401CBC97C900207229 /* EaseEmoji.m in Sources */,
 				847B4A121CBC97C900207229 /* MWTapDetectingImageView.m in Sources */,
 				847B4A441CBC97C900207229 /* FixFopen.c in Sources */,
+				1F3FE0681CCB8F3600F82EE4 /* EditTableViewCell.swift in Sources */,
 				847B4ABA1CBCEB3700207229 /* UserProfileViewController.m in Sources */,
+				1FA5D7AA1CE2DA4F00BFBD99 /* GroupBansViewController.m in Sources */,
 				847B4A251CBC97C900207229 /* UIView+EMWebCacheOperation.m in Sources */,
 				847B4A271CBC97C900207229 /* PSTCollectionView.m in Sources */,
 				848468381CB6631700312545 /* EdiltContactViewController.swift in Sources */,
@@ -2364,12 +2593,16 @@
 				847B4A631CBC994600207229 /* EaseUI.m in Sources */,
 				847B4A2F1CBC97C900207229 /* PSTGridLayoutInfo.m in Sources */,
 				847B4A281CBC97C900207229 /* PSTCollectionViewCell.m in Sources */,
+				1FD7DBCD1CCC60DF00236F55 /* CoreDateMethod.m in Sources */,
 				847B4A4F1CBC97C900207229 /* EaseMessageTimeCell.m in Sources */,
+				1FA5D7B31CE2DC2F00BFBD99 /* SearchChatViewController.m in Sources */,
 				847B4AA31CBCEAB900207229 /* EMChooseViewController.m in Sources */,
 				84D976141CB3976D0058F8E4 /* BaseRequestViewModel.swift in Sources */,
+				84B696241CC6265300D90A58 /* AboutViewController.swift in Sources */,
 				847B4A4C1CBC97C900207229 /* EaseBaseMessageCell.m in Sources */,
 				847B4A191CBC97C900207229 /* EMSDWebImageDownloader.m in Sources */,
 				847B4AA61CBCEAB900207229 /* XHMessageTextView.m in Sources */,
+				1F55358D1CE226F6009E18E7 /* ApplyFriendCell.m in Sources */,
 				847B4A3D1CBC97C900207229 /* EaseChineseToPinyin.m in Sources */,
 				84D975E31CB391D70058F8E4 /* ViewController.swift in Sources */,
 				847B49F01CBC97C800207229 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
@@ -2380,23 +2613,27 @@
 				847B4A421CBC97C900207229 /* EaseEmotionEscape.m in Sources */,
 				84D975E11CB391D70058F8E4 /* AppDelegate.swift in Sources */,
 				847B4A2E1CBC97C900207229 /* PSTCollectionViewUpdateItem.m in Sources */,
+				1F102EFB1CEE987D00C9132F /* NotifyObj.m in Sources */,
 				847B4A211CBC97C900207229 /* UIImage+EMMultiFormat.m in Sources */,
 				847B4AC41CBCEBAF00207229 /* RealtimeSearchUtil.m in Sources */,
 				847B49F41CBC97C800207229 /* wav.mm in Sources */,
 				84D976221CB39C040058F8E4 /* MessageViewController.swift in Sources */,
 				847B4A1E1CBC97C900207229 /* NSData+EMImageContentType.m in Sources */,
 				847B4A6A1CBCA47A00207229 /* YoshikoTextField.m in Sources */,
+				1F102EFD1CEE987D00C9132F /* MessageModel.m in Sources */,
+				1F102EFF1CEE98FF00C9132F /* JPush.swift in Sources */,
 				84BC35051CB4F1A40021E96B /* ContactDataHelp.swift in Sources */,
 				847B4A591CBC97C900207229 /* EaseChatToolbarItem.m in Sources */,
+				1FEB5D7B1CCB5EF900C44E72 /* ContactManageController.swift in Sources */,
 				847B4A381CBC97C900207229 /* NSDate+Category.m in Sources */,
 				847B4A2B1CBC97C900207229 /* PSTCollectionViewFlowLayout.m in Sources */,
 				84D976271CB3A77A0058F8E4 /* RAC.swift in Sources */,
 				847B4A4A1CBC97C900207229 /* EaseViewController.m in Sources */,
-				84D9760D1CB3970D0058F8E4 /* MainTabBarController.swift in Sources */,
 				847B4A5E1CBC97C900207229 /* EaseChatBarMoreView.m in Sources */,
 				847B4A261CBC97C900207229 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				84BC35001CB4EF060021E96B /* NSString+Utils.m in Sources */,
 				847B4A4D1CBC97C900207229 /* EaseCustomMessageCell.m in Sources */,
+				84B696221CC625E300D90A58 /* HistoryMessageViewController.swift in Sources */,
 				847B49F31CBC97C800207229 /* amrFileCodec.mm in Sources */,
 				847B4A501CBC97C900207229 /* EaseBubbleView+File.m in Sources */,
 				847B4A151CBC97C900207229 /* DACircularProgressView.m in Sources */,
@@ -2404,23 +2641,29 @@
 				847B4A6D1CBCD10100207229 /* IchiroTextField.m in Sources */,
 				84BC34E31CB4A5220021E96B /* ContectDetailViewController.swift in Sources */,
 				847B4AE71CBCF28F00207229 /* EMGifImage.m in Sources */,
+				84B696161CC5C48100D90A58 /* UserModel.swift in Sources */,
 				847B4A4E1CBC97C900207229 /* EaseMessageCell.m in Sources */,
 				847B4A0D1CBC97C900207229 /* MWCaptionView.m in Sources */,
 				847B4A1A1CBC97C900207229 /* EMSDWebImageDownloaderOperation.m in Sources */,
 				847B4A131CBC97C900207229 /* MWTapDetectingView.m in Sources */,
+				1FA5D7B01CE2DAC400BFBD99 /* SearchMessageViewController.m in Sources */,
 				847B4A531CBC97C900207229 /* EaseBubbleView+Location.m in Sources */,
 				8452CA1C1CC4DE570049C2F2 /* ContactModel.swift in Sources */,
 				848468301CB6345200312545 /* BottomView.swift in Sources */,
 				847B4A431CBC97C900207229 /* EaseEmotionManager.m in Sources */,
 				84D976101CB397450058F8E4 /* BaseNavigationController.swift in Sources */,
 				847B4A491CBC97C900207229 /* EaseUsersListViewController.m in Sources */,
+				84B6961E1CC612BD00D90A58 /* MineViewController.swift in Sources */,
+				1F5535871CE2268F009E18E7 /* ApplyViewController.m in Sources */,
 				847B4AA01CBCEAB900207229 /* EMTextView.m in Sources */,
+				1F102EFC1CEE987D00C9132F /* NotificationView.m in Sources */,
 				847B4A1C1CBC97C900207229 /* EMSDWebImagePrefetcher.m in Sources */,
 				84D975E91CB391D70058F8E4 /* ___.xcdatamodeld in Sources */,
 				847B4AC01CBCEB7500207229 /* InvitationManager.m in Sources */,
 				8452CA141CC4A0850049C2F2 /* ContactGroupViewController.swift in Sources */,
 				847B4A4B1CBC97C900207229 /* EaseUserCell.m in Sources */,
 				847B4A551CBC97C900207229 /* EaseBubbleView+Video.m in Sources */,
+				1FA5D7AD1CE2DA6300BFBD99 /* GroupSubjectChangingViewController.m in Sources */,
 				84D9762A1CB3A8730058F8E4 /* ContactViewModel.swift in Sources */,
 				847B4A561CBC97C900207229 /* EaseBubbleView+Voice.m in Sources */,
 				847B4AC11CBCEB7500207229 /* UserProfileManager.m in Sources */,
@@ -2428,6 +2671,7 @@
 				847B4A781CBCDFDD00207229 /* ChatDemoHelper.m in Sources */,
 				847B4A3C1CBC97C900207229 /* UIViewController+HUD.m in Sources */,
 				84D976281CB3A77A0058F8E4 /* RACObserve.swift in Sources */,
+				1FD7DBB61CCC5DC800236F55 /* ContactModel.xcdatamodeld in Sources */,
 				847B4A6F1CBCD40700207229 /* LoginViewModel.swift in Sources */,
 				847B4A101CBC97C900207229 /* MWPhoto.m in Sources */,
 				847B4A371CBC97C900207229 /* EaseUserModel.m in Sources */,
@@ -2559,6 +2803,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2577,6 +2822,7 @@
 					"$(PROJECT_DIR)/Lib/HyphenateSDK/lib",
 					"$(PROJECT_DIR)/Lib/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/Lib/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+					"$(PROJECT_DIR)/JPushlib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -2653,9 +2899,10 @@
 					"-force_load",
 					"\"$(SRCROOT)/Lib/HyphenateSDK/lib/libHyphenateFullSDK.a\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiangshu.Contact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiangshu.Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/Clone/LD-/通讯录/OtherViewController/通讯录-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zhang/Desktop/通讯录/OtherViewController/通讯录-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 			};
 			name = Debug;
@@ -2666,6 +2913,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2684,6 +2932,7 @@
 					"$(PROJECT_DIR)/Lib/HyphenateSDK/lib",
 					"$(PROJECT_DIR)/Lib/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/Lib/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+					"$(PROJECT_DIR)/JPushlib",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -2760,9 +3009,10 @@
 					"-force_load",
 					"\"$(SRCROOT)/Lib/HyphenateSDK/lib/libHyphenateFullSDK.a\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiangshu.Contact;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiangshu.Contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/Clone/LD-/通讯录/OtherViewController/通讯录-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/zhang/Desktop/通讯录/OtherViewController/通讯录-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 			};
 			name = Release;
@@ -2791,6 +3041,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		1FD7DBB41CCC5DC800236F55 /* ContactModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FD7DBB51CCC5DC800236F55 /* ContactModel.xcdatamodel */,
+			);
+			currentVersion = 1FD7DBB51CCC5DC800236F55 /* ContactModel.xcdatamodel */;
+			path = ContactModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		84D975E71CB391D70058F8E4 /* ___.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

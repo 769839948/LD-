@@ -20,7 +20,7 @@ class ContectDetailViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         self.setUpTableView()
         self.setUpBottomView()
-        self.setUpNavigationItem()
+//        self.setUpNavigationItem()
         // Do any additional setup after loading the view.
     }
 
@@ -76,16 +76,18 @@ class ContectDetailViewController: UIViewController {
     
     func pushViewController(tag:NSInteger){
         if tag == 1{
-           let conversation = EMClient.sharedClient().chatManager.getConversation(contact.username, type: EMConversationTypeChat, createIfNotExist: true) as EMConversation
+           let conversation = EMClient.sharedClient().chatManager.getConversation(contact.phone, type: EMConversationTypeChat, createIfNotExist: true) as EMConversation
             let chatControler = ChatViewController(conversationChatter: conversation.conversationId, conversationType: conversation.type)
             chatControler.title = conversation.conversationId;
             self.navigationController?.pushViewController(chatControler, animated: true)
         }else if(tag == 2){
-            
+            UIApplication.sharedApplication().openURL(NSURL(string: "sms://\(contact.phone)")!)
         }else{
             
         }
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -124,18 +126,22 @@ extension ContectDetailViewController : UITableViewDataSource{
             cell?.imageView?.image = UIImage(named: "user")
             cell?.textLabel?.text = contact.username
         }else if indexPath.row == 1{
-            cell?.textLabel?.text = contact.phone
+            cell?.textLabel?.text = "电话:\(contact.phone)"
         }else if indexPath.row == 2{
-            cell?.textLabel?.text = contact.email
+            cell?.textLabel?.text = "邮箱:\(contact.email)"
         }else if indexPath.row == 3{
-            cell?.textLabel?.text = "部门:" + contact.department
+            cell?.textLabel?.text = "部门:" + contact.department!
         }else{
-            cell?.textLabel?.text = "分享"
+            cell?.textLabel?.text = "分享给好友"
         }
         return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if indexPath.row == 1 {
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://\(contact.phone)")!)
+        }
         if indexPath.row == 4 {
             CoreUmengShare.show(self, text: "友盟分享", image: nil)
         }

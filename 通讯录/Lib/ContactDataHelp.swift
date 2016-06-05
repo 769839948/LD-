@@ -15,7 +15,7 @@ class ContactDataHelp: NSObject {
 //        gicenName;
         let names = NSMutableArray()
         for index in contact{
-            names.addObject(index.username)
+            names.addObject(index.username!)
         }
         
         return ChineseString.IndexArray(names as [AnyObject])

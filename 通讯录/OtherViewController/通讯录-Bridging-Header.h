@@ -18,6 +18,7 @@
 #import "YoshikoTextField.h"
 #import "IchiroTextField.h"
 #import "UIView+CurrentController.h"
+#import "UIViewCOntroller+HUD.h"
 #import "NSObject+CurrentVC.h"
 #import "ChatDemoHelper.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -28,6 +29,13 @@
 #import "CoreUMeng.h"
 #import "CoreUmengShare.h"
 #import "GroupModel.h"
-
+#import "EMSearchBar.h"
+#import "CoreDateMethod.h"
+#import "UserProfileManager.h"
+#import "TTGlobalUICommon.h"
+#import "ApplyViewController.h"
+#import "ChatViewController.h"
+#import "JPUSHService.h"
+#import "NotifyObj.h"
 
 #endif /* ____Bridging_Header_h */

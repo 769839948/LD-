@@ -8,12 +8,14 @@
 
 import UIKit
 import RATreeView
+import MJRefresh
 
 typealias pushNavigation = (model:Contacts) -> Void
-
+typealias hiderHudClourse = () -> Void
 class ContactGroupViewController: UIViewController {
     
     var treeView = RATreeView()
+    var hiderClourse:hiderHudClourse!
     var contactGroup:NSMutableArray!
     var contacts:NSMutableArray!
     var viewModel = ContactViewModel()
@@ -22,6 +24,7 @@ class ContactGroupViewController: UIViewController {
         super.viewDidLoad()
         contactGroup = NSMutableArray()
         self.setUpTreeView()
+        self.setUpRefreshView()
         // Do any additional setup after loading the view.
     }
 
@@ -31,8 +34,6 @@ class ContactGroupViewController: UIViewController {
         treeView.dataSource = self
         treeView.rowsExpandingAnimation = RATreeViewRowAnimationRight;
         treeView.rowsCollapsingAnimation = RATreeViewRowAnimationLeft;
-        let footerView = UIView(frame: CGRectMake(0,0,320,80))
-        treeView.treeFooterView = footerView
         self.view.addSubview(treeView)
         treeView.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(self.view.snp_top).offset(0)
@@ -43,13 +44,46 @@ class ContactGroupViewController: UIViewController {
         self.bindViewModel()
     }
     
+    func setUpRefreshView(){
+        self.treeView.scrollView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
+            self.loadContactGroup()
+        })
+        self.treeView.scrollView.mj_header.automaticallyChangeAlpha = true
+    }
+    
     func bindViewModel(){
         viewModel = ContactViewModel()
-        viewModel.contactGroup().subscribeNext { (model) -> Void in
+        self.loadContactGroup()
+    }
+    
+    func loadContactGroup(){
+        self.performSelectorOnMainThread(#selector(ContactGroupViewController.showHid(_:)), withObject: "加载中", waitUntilDone: true)
+        let compayName = NSUserDefaults.standardUserDefaults().objectForKey("compayName") as! String
+        viewModel.contactGroup(compayName).subscribeNext { (model) -> Void in
             self.contactGroup = model as! NSMutableArray
+            self.performSelectorOnMainThread(#selector(ContactGroupViewController.updateTableView), withObject: nil, waitUntilDone: true)
             
-            self.treeView.reloadData()
         }
+        viewModel.hidder = { (msg)->Void in
+            if self.hiderClourse != nil{
+                self.hiderClourse()
+                self.performSelectorOnMainThread(#selector(UIViewController.hideHud), withObject: nil, waitUntilDone: true)
+                self.treeView.scrollView.mj_header.endRefreshing()
+            }
+        }
+    }
+    
+    func updateTableView(){
+        self.treeView.reloadData()
+        if hiderClourse != nil{
+            self.hiderClourse()
+        }
+        self.hideHud()
+        self.treeView.scrollView.mj_header.endRefreshing()
+    }
+    
+    func showHid(string:String){
+        self.showHudInView(self.view, hint: string)
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +95,7 @@ class ContactGroupViewController: UIViewController {
 
 extension ContactGroupViewController : RATreeViewDelegate{
     func treeView(treeView: RATreeView, didSelectRowForItem item: AnyObject) {
+        treeView.deselectRowForItem(item, animated: true)
         if (item.isKindOfClass(Contacts.classForCoder())){
             if (myClosure != nil){
                 myClosure(model: item as! Contacts)
@@ -105,11 +140,26 @@ extension ContactGroupViewController : RATreeViewDataSource{
             var cell = treeView.dequeueReusableCellWithIdentifier(identifier)
             if cell == nil{
                 cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: identifier)
+            }else{
+                while(cell?.contentView.subviews.last != nil){
+                    cell?.contentView.subviews.last?.removeFromSuperview()
+                }
             }
-            cell?.imageView?!.image = UIImage(named:contact.phone)
-            cell?.textLabel?!.text = contact.username
-            cell?.detailTextLabel?!.text = contact.phone
-            return cell as! UITableViewCell
+            
+            let imageView = UIImageView(frame: CGRectMake(25, 10, 30, 30))
+            imageView.image = UIImage(named: "address_book")
+            cell?.contentView.addSubview(imageView)
+            
+            let username = UILabel(frame: CGRectMake(70, 15, UISCREEN_SIZE.width - 90, 15))
+            username.font = UIFont.boldSystemFontOfSize(15.0)
+            username.text = contact.username
+            cell?.contentView.addSubview(username)
+            
+            let phone = UILabel(frame: CGRectMake(70, 35, UISCREEN_SIZE.width - 90, 10))
+            phone.text = contact.phone
+            phone.font = UIFont.boldSystemFontOfSize(10.0)
+            cell?.contentView.addSubview(phone)
+            return cell! as! UITableViewCell
         }
         
     }

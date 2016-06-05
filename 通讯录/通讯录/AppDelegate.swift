@@ -19,42 +19,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate,EMChatManagerDelegate {
     var mainTabBarController:MainTabBarController!
     var _connectionState:EMConnectionState!
     var window: UIWindow?
-
+    var notificatins:NSMutableArray!
+    var unreadMsgs:NSMutableArray!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         _connectionState = EMConnectionConnected
         self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
 //        self.loadPerson()
-//        if launchOptions == nil{
-//            self.easemobApplication(application, launchOptions: ["":""], appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
-//        }else{
-//            self.easemobApplication(application, launchOptions: launchOptions!, appKey: "769839948#contact", apnsCerName: "chatdemoui_dev", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
-//        }
+       
+
+        if launchOptions == nil{
+            self.easemobApplication(application, launchOptions: ["":""], appKey: "769839948#contact", apnsCerName: "YXA6TnSoDYtR4GGJ_4Cvtb1wAECP7eQ", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
+            self.applicationJPush(application, launchOptions: ["":""])
+        }else{
+            self.easemobApplication(application, launchOptions: launchOptions!, appKey: "769839948#contact", apnsCerName: "YXA6TnSoDYtR4GGJ_4Cvtb1wAECP7eQ", otherConfig: [kSDKConfigEnableConsoleLogger:NSNumber(bool: true)])
+            self.applicationJPush(application, launchOptions: launchOptions)
+        }
 //        UINavigationBar .appearance().barTintColor = THEMECOLOR
-        let mainViewController = MainTabBarController()
-        self.window!.rootViewController = mainViewController
+//        let mainViewController = MainTabBarController()
+//        self.window!.rootViewController = mainViewController
         self.window?.makeKeyWindow()
 
         return true
     }
     
     // 将得到的deviceToken传给SDK
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
-            EMClient.sharedClient().bindDeviceToken(deviceToken)
-        }
-    }
+//    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+//        
+//    }
     // 注册deviceToken失败，此处失败，与环信SDK无关，一般是您的环境配置或者证书配置有误
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         print("errorLoad")
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        if ((mainTabBarController) != nil){
-            mainTabBarController.jumpToChatList()
-        }
-    }
+//    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+//        
+//    }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         if ((mainTabBarController) != nil){
@@ -92,15 +93,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,EMChatManagerDelegate {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+//    func applicationDidBecomeActive(application: UIApplication) {
+//        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//    }
 
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
-    }
+//    func applicationWillTerminate(application: UIApplication) {
+//        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//        // Saves changes in the application's managed object context before the application terminates.
+//        self.saveContext()
+//    }
 
     // MARK: - Core Data stack
 
